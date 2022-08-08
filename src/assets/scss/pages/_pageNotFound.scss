@@ -1,0 +1,132 @@
+.page-not-found{
+	.container{
+		padding: 30px 20px;
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		@media all and (min-width: 992px){
+			padding: 50px 20px;
+		}
+		@media all and (min-width: 1200px){
+			padding: 70px 0;
+		}
+		@media all and (min-width: 1440px){
+			padding: 96px 0 100px;
+			max-width: 1198px;
+		}
+		@media (min-width: 1300px) and (max-width: 1400px){
+			padding: 93px 0;
+			max-width: 1140px;
+		}
+	}
+	.right-block{
+		margin-bottom: 20px;
+		order: 2;
+		@media all and (min-width: 768px){
+			width: 53%;
+			max-width: 569px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			max-width: 544px;
+		}
+	}
+	.left-block{
+		order: 1;
+		@media all and (min-width: 768px){
+			width: 45%;
+			padding-top: 19px;
+		}
+		@media all and (min-width: 1200px){
+			padding-left: 30px;
+		}
+		@media all and (min-width: 1440px){
+			padding-left: 58px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			padding-left: 58px;
+		}
+	}
+	.img-wrap{
+		max-width: 350px;
+		margin: 0 auto;
+		@media all and (min-width: 768px){
+			max-width: 100%;
+			margin: 0 0 0 auto;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+	h1{
+		@include fontsize(30px);
+		margin-bottom: 0;
+		font-weight: $fw-black;
+		color: $gray-3;
+		@media all and (min-width: 768px){
+			@include fontsize(40px)
+		}
+		@media all and (min-width: 992px){
+			@include fontsize(50px);
+		}
+		@media all and (min-width: 1200px){
+			@include fontsize(64px);
+			margin-bottom: 3px;
+		}
+	}
+	h2{
+		@include fontsize(25px);
+		margin-bottom: 10px;
+		font-weight: $fw-black2;
+		color: $gray-3;
+		text-transform: capitalize;
+		@media all and (min-width: 768px){
+			@include fontsize(30px)
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 18px;
+		}
+	}
+	p{
+		font-weight: $fw-medium;
+		color: $gray-3;
+		text-transform: capitalize;
+		margin-bottom: 15px;
+		letter-spacing: 0.2px;
+		@media all and (min-width: 768px){
+			@include fontsize(18px)
+		}
+		@media all and (min-width: 992px){
+			@include fontsize(20px);
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 25px;
+		}
+		@media all and (min-width: 1440px){
+			margin-bottom: 34px;
+		}
+	}
+	.btn-wrap{
+		.btn{
+			@include fontsize(16px);
+			@media all and (min-width: 992px){
+				padding: 7px 126px;
+			}
+		}
+	}
+}
+.core-services .service-card-first
+.services-block {
+    width: 22%;
+}
+
+.core-services .service-card-first
+{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+}

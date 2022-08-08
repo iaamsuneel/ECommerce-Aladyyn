@@ -1,0 +1,500 @@
+.seller-info{
+	padding: 23px 0;
+	.section-header{
+		margin-bottom: 30px;
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 48px;
+		}
+		h1{
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+			}
+		}
+		.header-right{
+			.btn.edit{
+				padding: 7px 20px;
+				@include fontsize(16px);
+				@media all and (min-width: 1200px){
+					@include fontsize(20px);
+					padding: 4px 101px;
+				}
+			}
+			.btn.add{
+				text-transform: initial;
+				font-weight: $fw-semibold;
+				position: relative;
+				@media all and (min-width: 768px){
+					margin-bottom: -110px;
+				}
+				@media all and (min-width: 1200px){
+					margin-bottom: -155px;
+					padding: 3px 16px 4px 22px;
+				}
+				.icon-plus{
+					background: url(../../images/icons/icon-plus-4.svg);
+					width: 14px;
+					height: 14px;
+					display: inline-block;
+					margin: 0 7px -1px 0;
+				}
+			}
+		}
+	}
+	.container{
+		.nav-tabs{
+			margin-bottom: 23px !important;
+			min-height: 42px;
+			@media all and (min-width: 768px){
+				padding-right: 300px;
+			}
+			@media all and (min-width: 1200px){
+				padding-right: 350px;
+			}
+			.nav-link{
+				padding-bottom: 15px;
+			}
+		}
+		.address-table{
+			padding-bottom: 26px;
+			@media all and (min-width: 1200px){
+				padding-bottom: 50px;
+			}
+			.table-wrap{
+				overflow: auto;
+				&::-webkit-scrollbar {
+					height: 5px;
+				}
+				&:hover::-webkit-scrollbar {
+					height: 5px;
+				}
+				&::-webkit-scrollbar-track {
+					background: #f9f9f9;
+					border-radius: 4px;
+				}
+				&::-webkit-scrollbar-thumb {
+					background: rgba(0, 0, 0, 0.2);
+					border-radius: 4px;
+				}
+				&::-webkit-scrollbar-thumb:hover {
+					background: $black;
+				}			 
+				.table-card{
+					background: $white;
+					box-shadow: 2px 4px 8px rgba(89, 97, 117, 0.08);
+					border-radius: 4px;
+					display: flex;
+					min-width: 1110px;
+					padding: 14px 10px;
+					margin-bottom: 9px;
+					position: relative;
+					@media all and (min-width: 1200px){
+						padding: 26px 31px 24px;
+					}
+					@media all and (min-width: 1440px){
+						min-width: 1200px;
+					}
+					.menu-wrap{
+						position: absolute;
+						top: 0;
+						right: 0;
+						margin: 18px 8px 0 0;
+					}
+					.card-column{
+						width: 17.6%;
+						flex-shrink: 0;
+						padding-right: 24px;
+						&.days{
+							width: 28.3%;
+							margin-left: 15px;
+							padding-right: 0;
+						}
+						h2{
+							color: $gray-5;
+							@include fontsize(16px);
+							margin-bottom: 13px;
+						}
+						.value{
+							color: $gray-3;
+							@include fontsize(16px);
+							font-weight: $fw-bold;
+							line-height: 1.4;
+							&.no-value{
+								color: $gray-2;
+								text-transform: uppercase;
+							}
+							.value-part{
+								display: flex;
+								align-items: center;
+								.part-left{
+									min-width: 164px;
+									margin-right: 5px;
+								}
+								.part-right{
+
+								}
+							}
+						}
+					}
+				}
+			}
+			.pagination-wrap{
+				margin: 25px -5px 0 0;
+				@media all and (min-width: 1200px){
+					margin-top: 24px;
+				}
+			}
+		}
+	}
+	.edit-info{
+		margin-bottom: 20px;
+		@media all and (min-width: 992px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1440px){
+			margin-bottom: 50px;
+		}
+		.card{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			@media all and (min-width: 992px){
+				flex-direction: row;
+			}
+			@media all and (min-width: 1200px){	
+				padding: 51px 32px 15px;
+			}
+		}
+		.left-block{
+			order: 2;
+			width: 100%;
+			@media all and (min-width: 992px){
+				order: 1;
+				width: 66%;
+			}
+		}
+		.right-block{
+			order: 1;
+			width: 100%;
+			@media all and (min-width: 992px){
+				order: 2;
+				width: 32%;
+			}
+		}
+		.input-wrapper{
+			margin-bottom: 20px;
+			@media all and (min-width: 1200px){
+				margin-bottom: 32px;
+			}
+			&:nth-child(2){
+				margin-bottom: 50px;
+			}
+		}
+		.img-upload{
+			margin-bottom: 30px;
+			.img-container{
+				border: 1px dashed $gray;
+				@include radius(2px);
+				background: $gray-4;
+				max-width: 363px;
+				height: 321px;
+				margin: 0 auto 23px;
+				@media all and (min-width: 768px){
+					margin: 0 0 23px 0;
+				}
+				@media all and (min-width: 992px){
+					height: 322px;
+				}
+				@media all and (min-width: 1200px){
+					height: 368px;
+				}
+			}
+			.img-placeholder{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				color: $gray-5;
+				text-align: center;
+				width: 100%;
+				height: 100%;
+				.icon-picture{
+					display: inline-block;
+					background: url(../../images/icons/icon-picture-2.svg) no-repeat;
+					width: 16px;
+					height: 16px;
+					margin-bottom: 12px;
+				}
+				.text{
+					display: block;
+					@include fontsize(14px);
+				}
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					display: block;
+				}
+			}
+		}
+		.upload-btn{
+			max-width: 363px;
+			margin: 0 auto;
+			position: relative;
+			@media all and (min-width: 768px){
+				margin: 0;
+			}
+			.btn{
+				@include fontsize(16px);
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+			&:hover{
+				.btn{
+					background: linear-gradient(to right, #7a9cf3 0%, #74adf0 100%);
+				}
+			}
+			input[type="file"]{
+				@include absolute(0, 0, 0, 0);
+				z-index: 1;
+				opacity: 0;
+				font-size: 0;
+				width: 100%;
+				height: 100%;
+				cursor: pointer;
+			}
+		}
+		.btn-wrap{
+			order: 3;
+			width: 100%;
+			flex-wrap: wrap;
+			margin-top: 10px;
+			input{
+				width: 100%;
+				@media all and (min-width: 768px){
+					width: auto;
+				}
+				@media all and (min-width: 992px){
+					padding: 5px 20px 6px;
+				}
+				&.secondary-btn{
+					margin: 0 0 20px 0;
+					@media all and (min-width: 768px){
+						margin: 0 20px 0 0;
+					}
+				}
+			}
+		}
+	}
+	.input-wrap{
+		& + .input-wrap{
+			margin-top: 50px;
+		}
+		&.text-editor{
+			textarea{
+				width: 100%;
+				outline: none;
+				min-height: 182px;
+			}
+		}
+	}
+	.input-wrapper{
+		label{
+			display: block !important;
+			&:before{
+				position: relative !important;
+				top: -2px !important;
+			}
+		}
+	}
+	.select-wrap{
+		&.multiple-selects{
+			@media all and (min-width: 768px){
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+			.select-wrapper{
+				position: relative;
+				&:first-child{
+					@media all and (min-width: 768px){
+						max-width: 268px;
+					}
+					.form-control{
+						border-top-right-radius: 0;
+						border-bottom-right-radius: 0;
+					}
+				}
+				&:nth-child(2){
+					@media all and (min-width: 768px){
+						max-width: 121px;
+					}
+					.form-control{
+						border-top-left-radius: 0;
+						border-bottom-left-radius: 0;
+					}
+				}
+				.error{
+					padding: 0;
+					top: 100%;
+					bottom: auto;
+				}
+				select{
+					background: url(../../images/icons/icon-down-4.svg) no-repeat;
+					background-position: calc(100% - 10px) 16px;
+					padding-right: 30px;
+				}
+			}
+		}
+	}
+	button{
+		&.add-language{
+			background: transparent;
+			border: none;
+			outline: none;
+			font-weight: $fw-semibold;
+			color: $blue;
+			border-bottom: 1px solid $blue;
+			margin-bottom: 20px;
+			@media all and (min-width: 1200px){
+				margin-bottom: 37px;
+			}
+		}
+		&.remove-btn{
+			width: 21px;
+			height: 21px;
+			display: block;
+			margin: 10px auto 0;
+			background: transparent;
+			border: none;
+			outline: none;
+			background: url(../../images/icons/icon-cross-3.svg) no-repeat;
+			background-size: cover;
+			@media all and (min-width: 768px){
+				margin: 0 0 0 10px;
+			}
+		}
+	}
+}
+.seller-info{
+	.tab-content {
+		margin-bottom: 29px;
+		@media all and (min-width: 1440px){
+			margin-bottom: 59px;
+		}
+	}
+	.description-wrap{
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1440px){
+			padding: 48px 45px 47px 30px;	
+			margin-bottom: 50px;	
+		}
+		.seller-details{
+			@media all and (min-width: 1440px){
+				padding: 2px 0 0 66px;		
+			}
+			.details-wrap{
+				margin-bottom: 32px;
+				.detail-list{
+					.details-values{
+						li{
+							flex-wrap: wrap;
+							.detail-text{
+								margin-bottom: 5px;
+								@media all and (min-width: 1200px){
+									margin-bottom: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+			h4{
+				color: $gray-5;
+				margin-bottom: 9px;
+				@include fontsize(16px);
+				font-weight: $fw-regular;
+			}
+		}
+	}
+	.slider-heading{
+        border-bottom: 1px solid $gray;
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        h2{
+            @include fontsize(20px);
+            margin-bottom: 0;
+            color: $gray-3;
+            font-weight: $fw-bold;
+            @media all and (min-width: 1200px){
+                @include fontsize(32px);
+            }
+        }
+		.btn{
+			padding: 7px 13px;
+			@include fontsize(13px);
+			font-weight: $fw-bold;
+			@media all and (min-width: 1200px){
+                @include fontsize(16px);
+            }
+			.icon-plus{
+				background: url(../../images/icons/icon-plus-4.svg);
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				margin: 0 7px -1px 0;
+			}
+		}
+    }
+	.services-inputs{
+		@media all and (min-width: 768px){
+			margin-bottom: 22px;
+		}
+	}
+	
+	.btn-wrap{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		margin: 30px 0 40px;
+		@media all and (min-width: 768px){
+			margin-top: 40px;
+			justify-content: flex-end;
+		}
+		@media all and (min-width: 1200px){
+			margin: -12px 0 53px;
+		}
+		.btn{
+			padding: 7px 43px;
+			@media all and (min-width: 1200px){
+				padding: 4px 99px;
+			}
+		}
+		.btn, .secondary-btn{
+			@media all and (min-width: 768px){
+				min-width: 246px;
+			}
+			@media all and (min-width: 992px){
+				padding: 5px 89px 6px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 4px 89px;
+			}
+		}
+		.secondary-btn{
+			margin-right: 24px;
+		}
+	}
+}

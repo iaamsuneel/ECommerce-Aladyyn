@@ -1,0 +1,94 @@
+.billing-method{
+	&.edit{
+		.breadcrumb{
+			@media all and (min-width: 1200px){
+				margin-bottom: 56px;
+			}
+		}
+		.card{
+			@media all and (min-width: 1200px){
+				padding: 51px 32px 63px;
+			}
+		}
+		.input-block{
+			margin-bottom: 10px;
+		}
+		.input-label{
+			margin-bottom: 18px;
+		}
+		.input-wrap{
+			&.radio-group{
+				margin-bottom: 20px;
+				@media all and (min-width: 1200px){
+					margin-bottom: 35px;
+				}
+			}
+		}
+		.col-xl-3{
+			&.fix-width{
+				@media all and (min-width: 1200px){
+					max-width: 267px;
+				}
+			}
+		}
+		.col-xl-2{
+			&.fix-width{
+				@media all and (min-width: 1200px){
+					max-width: 120px;
+				}
+			}
+		}
+		.btn-wrap{
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+			@media all and (min-width: 768px){
+				margin-top: 38px;
+				justify-content: flex-end;
+			}
+			.btn, .secondary-btn{
+				@media all and (min-width: 992px){
+					padding: 5px 89px 6px;
+				}
+				@media all and (min-width: 1200px){
+					padding: 4px 89px;
+				}
+				@media all and (min-width: 1300px) and (max-width: 1400px){
+					padding: 4px 86px;
+				}
+			}
+			.btn{
+				@media all and (min-width: 1200px){
+					padding: 4px 99px;
+				}
+				@media all and (min-width: 1300px) and (max-width: 1400px){
+					padding: 4px 95px;
+				}
+			}
+			.secondary-btn{
+				margin-right: 24px;
+			}
+		}
+		.bank-inputs{
+			@media all and (min-width: 1200px){
+				padding-top: 9px;
+			}
+			.input-heading{
+				color: $gray-5;
+				font-weight: $fw-bold;
+				letter-spacing: -0.2px;
+				margin-bottom: 11px;
+			}
+			.input-wrapper{
+				@media all and (min-width: 1200px){
+					margin-bottom: 33px;
+				}
+				label{
+					@media all and (min-width: 1200px){
+						margin-bottom: 12px;
+					}
+				}
+			}
+		}
+	}
+}

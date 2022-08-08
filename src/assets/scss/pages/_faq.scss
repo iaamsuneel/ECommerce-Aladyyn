@@ -1,0 +1,14 @@
+.faq{
+	padding: 20px 0 30px;
+	@media all and (min-width: 1200px){
+		padding-bottom: 60px;
+	}
+	.container{
+		@media all and (min-width: 1300px){
+			max-width: 1207px;
+		}
+	}
+	h1{
+		letter-spacing: -0.2px;
+	}
+}

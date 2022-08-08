@@ -1,0 +1,58 @@
+.terms-conditions{
+	padding: 30px 0;
+	@media all and (min-width: 1200px){
+		padding: 60px 0;
+	}
+	h1{
+		text-align: center;
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+	p{
+		margin-bottom: 10px;
+		text-align: justify;
+		a{
+			color: $blue;
+		}
+	}
+	ul{
+		text-align: justify;
+		.sub-heading{
+			text-transform: uppercase;
+			position: relative;
+			margin-bottom: 20px;
+			padding-left: 35px;
+			@media all and (min-width: 768px){
+				padding-left: 40px;
+			}
+			.marker-upper{
+				@include absolute(0, auto, auto, 0);
+				display: block;
+				width: 30px;
+				text-align: center;
+			}
+			ul{
+				text-transform: initial;
+				li{
+					padding-left: 35px;
+					@media all and (min-width: 768px){
+						padding-left: 40px;
+					}
+					position: relative;
+					.marker-lower{
+						@include absolute(0, auto, auto, 0);
+						display: block;
+						width: 30px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		p{
+			text-transform: initial;
+		}
+		a{
+			color: $blue;
+		}
+	}
+}

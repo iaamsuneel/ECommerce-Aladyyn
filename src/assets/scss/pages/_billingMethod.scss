@@ -1,0 +1,191 @@
+.billing-method{
+	padding: 23px 0 40px;
+	@media all and (min-width: 768px){
+		padding-bottom: 50px;
+	}
+	@media all and (min-width: 1200px){
+		padding-bottom: 68px;
+	}
+	@media all and (min-width: 1300px) and (max-width: 1400px){
+		padding: 18px 0 40px;
+	}
+	.breadcrumb{
+		@media all and (min-width: 1200px){
+			margin-bottom: 53px;
+		}
+	}
+	.section-header{
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 38px;
+		}
+		.header-left{
+			width: 70%;
+		}
+	}
+	h1{
+		margin-bottom: 20px;
+		line-height: 1.187;
+		letter-spacing: -0.2px;
+		text-transform: capitalize;
+		@media all and (min-width: 768px){
+			margin-bottom: 0;
+		}
+	}
+	.btn{
+		padding: 7px 43px;
+	}
+	.btn, .secondary-btn{
+		@media all and (min-width: 768px){
+			padding: 7px 80px;
+		}
+		@media all and (min-width: 992px){
+			padding: 4px 101px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			padding: 4px 97px;
+		}
+	}
+	.heading-wrap{
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 27px;
+		}
+		.toggle-btn{
+			margin-left: 5px;
+			button{
+				display: block;
+			}
+			.icon-eye{
+				display: block;
+				width: 16px;
+				height: 16px;
+				background: url(../../images/icons/icon-eye-3.svg) no-repeat;
+				background-size: cover;
+				@media all and (min-width: 1200px){
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+	}
+	.card{
+		padding: 20px 10px;
+		margin-bottom: 8px;
+		@media all and (min-width: 768px){
+			padding: 30px;
+		}
+		@media all and (min-width: 1200px){
+			padding: 50px 32px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			padding: 46px 32px;
+		}
+	}
+	.information-block{
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.information-card{
+			margin-bottom: 8px;
+			@media all and (min-width: 768px){
+				width: calc(50% - 4px);
+			}
+		}
+		h4{
+			letter-spacing: -0.2px;
+			margin-bottom: 20px;
+			color: $gray-5;
+			@media all and (min-width: 768px){
+				margin-bottom: 27px;
+			}
+		}
+		.info-label{
+			margin-bottom: 12px;
+			color: $gray-5;
+		}
+		.left-block{
+			margin-right: 40px;
+		}
+	}
+	.billing-detail{
+		font-weight: $fw-bold;
+		color: $gray-3;
+	}
+	.input-block{
+		label{
+			margin-bottom: 10px;
+		}
+	}
+	.col-xl-6{
+		&.width-fix{
+			@media all and (min-width: 1200px){
+				width: 52%;
+			}
+		}
+	}
+	.col-xl-3{
+		&.width-fix{
+			@media all and (min-width: 1200px){
+				width: 24%;
+			}
+		}
+	}
+	.input-block{
+		position: relative;
+	}
+	.info-wrapper{
+		margin-bottom: 20px;
+		padding-right: 10px;
+		width: 100%;
+		@media all and (min-width: 1200px){
+			// width: 48%;
+			margin-bottom: 30px;
+		}
+		&.width-fix{
+			@media all and (min-width: 1200px){
+				width: 74%;
+			}
+		}
+	}
+	.bank-details{
+		h4{
+			margin-bottom: 20px;
+			@media all and (min-width: 1200px){
+				margin-bottom: 26px;
+			}
+		}
+		.info-label{
+			margin-bottom: 12px;
+			color: #505357;
+		}
+		.four-blocks{
+			.info-wrapper{
+				&.width-fix{
+					@media all and (min-width: 1200px){
+						width: 48%;
+					}
+				}
+				&.width-fix-74{
+					@media all and (min-width: 1200px){
+						width: 74%;
+					}
+				}
+			}
+		}
+	}
+	.error{
+		bottom: auto;
+		top: 100%;
+	}
+}

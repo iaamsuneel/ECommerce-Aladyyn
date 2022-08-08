@@ -1,0 +1,462 @@
+.add-service{
+	padding: 21px 0 40px;
+	@media all and (min-width: 1200px){
+		padding-bottom: 75px;
+	};
+	.card{
+		margin-bottom: 20px;
+		@media all and (min-width: 1200px){
+			padding: 38px 32px;
+			margin-bottom: 40px;
+		}
+	}
+	.react-select__placeholder{
+		font-weight: $fw-regular;
+		color: $gray-2 !important;
+	}
+	.price-select{
+		.react-select__single-value{
+			text-transform: lowercase;
+		}
+	}
+	.input-wrapper{
+		@media all and (min-width: 1200px){
+			margin-bottom: 32px;
+		}
+	}
+	.select-wrap{
+		.react-select__value-container{
+			@media all and (min-width: 1200px){
+				padding: 0 0 0 7px;
+			}
+		}
+		.react-select-container.form-control {
+			.react-select__dropdown-indicator{
+				margin-left: 10px;
+			}
+		}
+	}
+	.multiple-inputs{
+		@media all and (min-width: 768px){
+			display: flex;
+			flex-wrap: wrap;
+		}	
+		@media all and (min-width: 992px){
+			justify-content: space-between;
+		}
+		.input-wrapper{
+			&:first-child{
+				margin-right: 20px;
+			}
+			&:nth-child(2){
+				@media all and (min-width: 768px){
+					width: calc(100% - 134px);
+				}
+			}
+			.price-input{
+				width: 100%;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				@media all and (min-width: 768px){
+					width: 200px;
+				}
+				@media all and (min-width: 992px){
+					border-bottom-left-radius: 2px;
+					border-bottom-right-radius: 2px;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+				@media all and (min-width: 1300px){
+					width: 170px;
+				}
+				@media all and (min-width: 1400px){
+					width: 200px;
+				}
+			}
+			.price-select{
+				@media all and (min-width: 768px){
+					min-width: 150px;
+				}
+				@media all and (min-width: 992px){
+					min-width: initial;
+					width: calc(100% - 200px);
+					margin-left: -1px;
+				}
+				@media all and (min-width: 1300px){
+					width: calc(100% - 170px);
+				}
+				@media all and (min-width: 1400px){
+					width: calc(100% - 200px);
+				}
+				.react-select__control{
+					@media all and (min-width: 768px){
+						max-width: initial;
+					}
+				}
+			}
+			.react-select-container{
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+				@media all and (min-width: 992px){
+					border-top-left-radius: 2px;
+					border-top-right-radius: 2px;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+			.react-select__control{
+				width: 100%;
+				@media all and (min-width: 768px){
+					max-width: 112px;
+				}
+			}
+		}
+
+	}
+	.switch-wrap{
+		.switch{
+			margin-top: 7px;
+		}
+	}
+	textarea{
+		min-height: 66px;
+		letter-spacing: 0.2px;
+		@media all and (min-width: 1200px){
+			padding: 7px 13px;
+		}
+	}
+	.checkbox-wrap{
+		letter-spacing: -0.4px;
+		label{
+			text-transform: initial;
+			color: $gray-3;
+		}
+	}
+	.has-wordcount{
+		position: relative;
+	}
+	.word-count{
+		@include absolute(100% ,0);
+		display: block;
+	}
+	h3{
+		color: $gray-3;
+		margin-bottom: 20px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 30px;
+		}
+	}
+	.input-wrap{
+		&.multiple-inputs{
+			justify-content: flex-start;
+		}
+	}
+	.selects-wrap{
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 24px;
+			display: flex;
+		}
+		.select-wrap{
+			margin-bottom: 10px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+				min-width: 93px;
+				& + .select-wrap{
+					margin-left: 8px;
+				}
+				&.bigger{
+					min-width: 138px;
+				}
+			}
+			& > div{
+			  width: 100%;
+			  margin-top: 10px;  
+			  @media all and (min-width: 768px){
+				  margin-top: 0;
+				  height: 100%;
+			  }
+			}
+			.react-select__control{
+				@media all and (min-width: 768px){
+					height: 100%;
+				}
+			}
+			.react-select__value-container{
+				@media all and (min-width: 1200px){
+					padding: 0 0 0 13px;
+				}
+			}
+			&.disabled{
+				.react-select__single-value{
+					color: #9A9FA5;
+				}
+				.react-select__placeholder{
+					color: #9A9FA5;
+				}
+			}
+			.react-select__single-value{
+				color: #505357;
+				@include fontsize(20px);
+			}
+			.react-select__placeholder{
+				color: #505357;
+				@include fontsize(20px);
+			}
+		}
+	}
+	.content-wrap{
+		@media all and (min-width: 992px){
+			width: 80%;
+			max-width: 447px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			max-width: 422px;
+		}
+	}
+	.edit-info{
+		label{
+			@include fontsize(16px);
+			letter-spacing: 0.1px;
+			margin-bottom: 5px;
+			color: $gray-5;
+			@media all and (min-width: 1200px){
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.address-card{
+		@media all and (min-width: 1200px){
+			padding: 51px 32px;
+		}
+	}
+	.address-label{
+		margin-bottom: 16px;
+	}
+	.radio-wrap{
+		@media all and (min-width: 768px){
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.radio-btn{
+			@media all and (min-width: 768px){
+				margin-bottom: 15px;
+			}
+		}
+		.radio-left{
+			// margin-right: 18px;
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				width: 100%;
+			}
+			@media all and (min-width: 992px){
+				width: calc(50% - 9px);
+			}
+			@media all and (min-width: 1200px){
+				&:nth-child(odd){
+					width: 36%;
+					margin-right: 18px;
+				}
+				&:nth-child(even){
+					width: 60%;
+				}
+				margin-bottom: 30px;
+			}
+			ul{
+				margin-bottom: 15px;
+				@media all and (min-width: 768px){
+					padding-left: 1.5em;
+					margin-bottom: 0;
+				}
+				@media all and (min-width: 992px){
+					display: flex;
+				}
+				li{
+					color: $gray-5;
+					@media all and (min-width: 992px){
+						min-width: 183px;
+						&:nth-child(2){
+							min-width: 150px;
+						}
+					}
+				}
+			}
+			&.checked{
+				label{
+					font-weight: $fw-bold;
+				}
+				li{
+					font-weight: $fw-bold;
+				}
+			}
+
+		}
+		.radio-right{
+			ul{
+				margin-bottom: 15px;
+				@media all and (min-width: 768px){
+					padding-left: 1.5em;
+					margin-bottom: 0;
+				}
+				@media all and (min-width: 992px){
+					display: flex;
+				}
+				li{
+					color: $gray-5;
+					@media all and (min-width: 992px){
+						min-width: 194px;
+						&:nth-child(2){
+							min-width: 150px;
+						}
+					}
+				}
+			}
+			&.checked{
+				label{
+					font-weight: $fw-bold;
+				}
+				li{
+					font-weight: $fw-bold;
+				}
+			}
+
+		}
+		label{
+			font-weight: $fw-regular;
+			color: $gray-3;
+		}
+		.form-check-input{
+			&:checked[type="radio"]{
+				& + label{
+					font-weight: $fw-bold;
+				}
+			}
+		}
+	}
+	.card{
+		&.edit-info{
+			margin-bottom: 0;
+			@media all and (min-width: 1200px){
+				padding: 51px 32px 59px;
+			}
+			.input-wrapper{
+				&.img-input-fix{
+					margin-bottom: 3px;
+				}
+			}
+		}
+	}
+	.btn-wrap{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		@media all and (min-width: 768px){
+			margin-top: 37px;
+			justify-content: flex-end;
+		}
+		.btn{
+			padding: 7px 43px;
+		}
+		.btn, .secondary-btn{
+			@media all and (min-width: 992px){
+				padding: 5px 20px 6px;
+				min-width: 240px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 4px 20px;
+			}
+		}
+		.btn{
+			@media all and (min-width: 1200px){
+				padding: 4px 20px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				padding: 4px 20px;
+			}
+		}
+		.secondary-btn{
+			margin-right: 24px;
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				padding: 4px 20px;
+			}
+		}
+	}
+	.img-upload{
+		margin-bottom: 30px;
+		max-width: 363px;
+		cursor: pointer;
+		.img-container{
+			border: 1px dashed $gray;
+			@include radius(2px);
+			background: $gray-4;
+			max-width: 363px;
+			height: 287px;
+			margin: 0 auto 23px;
+			@media all and (min-width: 768px){
+				margin: 0 0 17px 0;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+		}
+		.img-placeholder{
+			color: $gray-5;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			.icon-picture{
+				display: inline-block;
+				background: url(../../images/icons/icon-picture-2.svg) no-repeat;
+				width: 16px;
+				height: 16px;
+				margin-bottom: 12px;
+			}
+			.text{
+				display: block;
+				@include fontsize(14px);
+			}
+		}
+		.upload-btn{
+			position: relative;
+			input[type="file"]{
+				@include absolute(0, 0, 0, 0);
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				font-size: 0;
+				cursor: pointer;
+				opacity: 0;
+			}
+			&:hover{
+				button{
+					background: $blue;
+					color: $white;
+				}
+			}
+			button{
+				@include fontsize(16px);
+			}
+		}
+	}
+	.select-wrap{
+		select{
+			background: url(../../images/icons/icon-down-4.svg) no-repeat;
+			background-position: calc(100% - 14px) 17px;
+			padding-right: 40px;
+		}
+	}
+	.inputs-wrapper{
+		.show-star{
+			&:before{
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+}

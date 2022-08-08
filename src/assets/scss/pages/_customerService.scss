@@ -1,0 +1,132 @@
+.customer-service{
+	padding: 20px 0;
+	@media all and (min-width: 1200px){
+		padding-bottom: 57px;
+	}
+	h1{
+		letter-spacing: -0.2px;
+	}
+	.card{
+		margin-bottom: 18px;
+		@media all and (min-width: 1440px){
+			padding: 103px 32px 68px;
+		}
+		&:nth-child(4){
+			padding: 26px 10px;
+		}
+	}
+	.select-wrap {
+		.react-select__control{
+			@media all and (min-width: 1200px){
+				min-height: 38px;
+			}
+		}
+	}
+	.inputs-wrapper{
+		@media all and (min-width: 768px){
+			margin-bottom: 28px;
+		}
+	}
+	.input-wrapper{
+		@media all and (min-width: 1200px){
+			margin-bottom: 32px;
+		}
+	}
+	.has-input-file {
+		.img-input-wrapper {
+			.img-input{
+				height: 40px;
+				@include fontsize(14px);
+			}
+		}
+	}
+	textarea{
+		&.form-control{
+			min-height: 137px;
+		}
+	}
+	.btn-wrap{
+		text-align: center;
+		.btn{
+			@media all and (min-width: 768px){
+				padding: 4px 80px;
+			}
+			@media all and (min-width: 992px){
+				padding: 4px 150px;
+			}
+		}
+	}
+	.contact-block{
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: center;
+		}
+		@media all and (min-width: 1440px){
+			padding-left: 3px;
+		}
+		.contact-wrap{
+			margin-bottom: 20px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+				padding-right: 10px;
+				&:first-child{
+					margin-right: 50px;
+				}
+			}
+			@media all and (min-width: 1200px){
+				&:first-child{
+					margin-right: 116px;
+				}
+			}
+			.contact-head{
+				display: flex;
+				align-items: center;
+				margin-bottom: 7px;
+				.text{
+					@include fontsize(14px);
+					color: $gray-5;
+				}
+			}
+			.icon-mail{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../../images/icons/icon-mail-2.svg) no-repeat;
+				margin-right: 8px;
+			}
+			.icon-dialer{
+				display: inline-block;
+				width: 24px;
+				height: 24px;
+				background: url(../../images/icons/icon-dialer.svg) no-repeat;
+				margin-right: 8px;
+			}
+		}
+		.contact-link{
+			a{
+				@include fontsize(16px);
+				font-weight: $fw-bold;
+				background: linear-gradient(47.22deg, #5E86EF 5.72%, #7A9CF3 94.27%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				padding-left: 2px;
+				&.tel-link{
+					background: initial;
+					-webkit-background-clip: initial;
+					-webkit-text-fill-color: initial;
+					color: $gray-5;
+				}
+			}
+		}
+	}
+	select{
+		&.form-control{
+			min-height: 40px;
+			padding: 7px 10px !important;
+			padding-right: 25px !important;
+		}
+	}
+}

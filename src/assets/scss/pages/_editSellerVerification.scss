@@ -1,0 +1,121 @@
+.edit-verification{
+	padding: 23px 0 40px;
+	@media all and (min-width: 1200px){
+		padding: 23px 0 73px;
+	}
+	@media all and (min-width: 1300px) and (max-width: 1400px){
+		padding: 18px 0 73px;
+	}
+	h1{
+		text-transform: capitalize;
+		letter-spacing: -0.1px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 36px;
+		}
+	}
+	h4{
+		margin-bottom: 20px;
+		@media all and (min-width: 992px){
+			margin-bottom: 28px;
+		}
+	}
+	.card{
+		@media all and (min-width: 1200px){
+			padding: 48px 32px 36px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			padding: 48px 30px 36px;
+		}
+	}
+	.input-block{
+		&.margin-fix{
+			margin-bottom: 10px;
+		}
+	}
+	.input-wrapper{
+		&.img-input-fix{
+			margin-bottom: 14px;
+		}
+	}
+	label{
+		&.margin-fix{
+			@media all and (min-width: 1200px){
+				margin-bottom: 26px;
+			}
+		}
+	}
+	.btn-wrap{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		@media all and (min-width: 768px){
+			margin-top: 40px;
+			justify-content: flex-end;
+		}
+		.btn{
+			padding: 7px 43px;
+		}
+		.btn, .secondary-btn{
+			@media all and (min-width: 992px){
+				padding: 5px 89px 6px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 4px 89px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				padding: 4px 86px;
+			}
+		}
+		.btn{
+			@media all and (min-width: 1200px){
+				padding: 4px 99px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				padding: 4px 95px;
+			}
+		}
+		.secondary-btn{
+			margin-right: 24px;
+		}
+	}
+	.number-detail{
+		@include fontsize(13px);
+		color: $gray-2;
+		margin-top: 3px;
+		@include absolute(calc(100% + 2px), auto, auto, 0);
+	}
+	.input-wrapper{
+		&.mb-fix{
+			margin-bottom: 70px;
+			@media all and (min-width: 768px){
+				margin-bottom: auto;
+			}
+		}
+	}
+	.inputs-heading{
+		margin-top: 30px;
+		@media all and (min-width: 768px){
+			margin-top: 0;
+		}
+	}
+	.contains-btn{
+		.input-wrap{
+			position: relative;
+			.form-control{
+				padding-right: 90px;
+			}
+		}
+		.btn-wrap{
+			@include absolute(5px, 0);
+			z-index: 1;
+			margin: 0;
+			button{
+				padding: 7px 10px;
+				@include fontsize(14px);
+				color: $blue;
+				text-transform: capitalize;
+				background: transparent;
+			}
+		}
+	}
+}

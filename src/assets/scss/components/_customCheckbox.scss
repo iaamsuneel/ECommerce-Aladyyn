@@ -1,0 +1,32 @@
+.custom-checkbox{
+	display: block;
+	position: relative;
+	cursor: pointer;
+	font-size: 13px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* Hide the browser's default checkbox */
+	 input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+	/* Create a custom checkbox */
+	.checkmark {
+		display: none;
+		transform: rotate(45deg);
+		height: 24px;
+		width: 12px;
+		border-bottom: 7px solid $green;
+		border-right: 7px solid $green;
+		opacity: 0;
+	}
+	/* When the checkbox is checked, add a blue background */
+	input:checked ~ .checkmark {
+		opacity: 1;
+	}
+}

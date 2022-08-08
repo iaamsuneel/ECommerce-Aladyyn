@@ -1,0 +1,62 @@
+.seller-optional-info{
+	padding: 22px 0 40px;
+	overflow: hidden;
+	@media all and (min-width: 768px){
+		padding-bottom: 50px;
+	}
+	@media all and (min-width: 1200px){
+		padding-bottom: 13px;
+	}
+	@media all and (min-width: 1300px) and (max-width: 1400px){
+		padding: 18px 0 40px;
+	}
+	.breadcrumb{
+		@media all and (min-width: 1200px){
+			margin-bottom: 53px;
+		}
+	}
+	.section-header{
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 51px;
+		}
+		.header-left{
+			width: 70%;
+		}
+	}
+	h1{
+		line-height: 1.187;
+		letter-spacing: -0.2px;
+		text-transform: capitalize;
+		margin: 3px 0 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 0;
+		}
+	}
+	.btn{
+		@media all and (min-width: 768px){
+			padding: 7px 80px;
+		}
+		@media all and (min-width: 992px){
+			padding: 4px 101px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			padding: 4px 97px;
+		}
+	}
+	.nav-tabs{
+		margin-bottom: 28px !important;
+	}
+	.card{
+		margin-bottom: 30px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 56px;
+		}
+	}
+}

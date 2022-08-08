@@ -1,0 +1,266 @@
+.cart{
+	padding: 20px 0 60px;
+	@media all and (min-width: 768px){
+		padding: 46px 0 60px;
+	}
+	h1{
+		@media all and (min-width: 1200px){
+			margin-bottom: 49px;
+		}
+	}
+	.select-all{
+		margin-bottom: 16px;
+	}
+	.cart-wrap{
+		@media all and (min-width: 992px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+		.left-block{
+			@media all and (min-width: 992px){
+				width: 62.7%;
+			}
+		}
+		.cart-item{
+			position: relative;
+			box-shadow: 2px 4px 8px rgba(89, 97, 117, 0.08);
+			@include radius(4px);
+			background: $white;
+			overflow: hidden;
+			padding: 15px;
+			margin-bottom: 8px;
+			@media all and (min-width: 768px){
+				display: flex;
+				padding: 0 0 0 60px;
+			}
+			.checkbox-wrap{
+				margin-bottom: 11px;
+				@media all and (min-width: 768px){
+					@include absolute(12px, auto, auto, 16px);
+				}
+			}
+			.item-img{
+				width: 100px;
+				height: 100px;
+				margin-bottom: 20px;
+				@media all and (min-width: 768px){
+					width: 192px;
+					height: 162px;
+				}
+				margin-bottom: 0;
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					display: block;
+				}
+			}
+			.item-right{
+				@media all and (min-width: 768px){
+					width: calc(100% - 192px);
+					padding: 16px 24px 15px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+				}
+			}
+			.item-info{
+				margin-bottom: 15px;
+				position: relative;
+				padding-right: 40px;
+				.item-name{
+					font-weight: $fw-semibold;
+					color: $gray-3;
+					margin-bottom: 3px;
+					@media all and (min-width: 768px){
+						@include fontsize(18px);
+					}
+					@media all and (min-width: 992px){
+						@include fontsize(20px);
+					}
+				}
+				.item-provider{
+					font-weight: $fw-bold;
+					color: $gray-2;
+				}
+				.remove-btn{
+					@include absolute(0, 0);
+					button{
+						background: transparent;
+						outline: 0;
+						border: 0;
+						display: block;
+						svg{
+							width: 24px;
+							height: 24px;
+							display: block;
+							background: url(../../images/icons/icon-bin.svg) no-repeat;
+							background-size: cover;
+							path{
+								transition: 0.3s;
+							}
+						}
+						&:hover{
+							svg{
+								path{
+									fill: $red-2;
+								}
+							}
+						}
+					}
+				}
+			}
+			.item-price{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.price-wrap{
+					font-weight: $fw-bold;
+					color: $gray-3;
+					@media all and (min-width: 768px){
+						@include fontsize(18px)
+					}
+					@media all and (min-width: 992px){
+						@include fontsize(20px)
+					}
+					@media all and (min-width: 1200px){
+						@include fontsize(24px)
+					}
+				}
+				.quantity-wrap{
+					display: flex;
+					border: 1px solid $gray;
+					@include radius(2px);
+					overflow: hidden;
+					height: 32px;
+					.quantity-increase, .quantity-decrease{
+						width: 29px;
+						height: 100%;
+						button{
+							background: transparent;
+							width: 100%;
+							height: 100%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+						}
+					}
+					.quantity{
+						min-width: 41px;
+						padding: 0 5px;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-left: 1px solid $gray;
+						border-right: 1px solid $gray;
+						color: $blue;
+					}
+				}
+			}
+		}
+		.right-block{
+			box-shadow: 2px 4px 8px rgba(89, 97, 117, 0.08);
+			@include radius(4px);
+			background: $white;
+			padding: 15px;
+			@media all and (min-width: 992px){
+				width: 35%;
+			}
+			@media all and (min-width: 1200px){
+				padding: 24px;
+			}
+			.cart-heading{
+				color: $gray-3;
+				font-weight: $fw-bold;
+				margin-bottom: 20px;
+				@media all and (min-width: 768px){
+					@include fontsize(18px);
+				}
+				@media all and (min-width: 992px){
+					@include fontsize(20px);
+				}
+				@media all and (min-width: 1200px){
+					@include fontsize(24px);
+					margin-bottom: 25px;
+				}
+			}
+			ul.added-items{
+				position: relative;
+				margin-bottom: 34px;
+				li{
+					display: flex;
+					justify-content: space-between;
+					margin-bottom: 16px;
+					&:last-child{
+						margin-bottom: 0;
+					}
+				}
+				.item-name{
+					font-weight: $fw-bold;
+					color: $gray-3;
+				}
+				.item-provider{
+					color: $gray-2;
+				}
+				.item-price{
+					color: item-price;
+					padding-left: 20px;
+				}
+				&:after{
+					content: '';
+					width: 100%;
+					height: 1px;
+					background: $gray;
+					@include absolute(calc(100% + 16px), 0, auto, 0);
+					z-index: 1;
+				}
+			}
+			.total-wrap{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 24px;
+				.text-wrap{
+					font-weight: $fw-bold;
+					@media all and (min-width: 992px){
+						margin-top: 3px;
+					}
+				}
+				.amount-wrap{
+					font-weight: $fw-bold;
+					@media all and (min-width: 768px){
+						@include fontsize(18px);
+					}
+					@media all and (min-width: 992px){
+						@include fontsize(20px);
+					}
+					@media all and (min-width: 1200px){
+						@include fontsize(24px);
+					}
+				}
+			}
+			.btn-wrap{
+				display: flex;
+				justify-content: end;
+				.btn{
+					@include fontsize(16px);
+					font-weight: $fw-bold;
+					min-width: 156px;
+				}
+			}
+		}
+	}
+	.image-wrap{
+		@media all and (min-width: 768px){
+			width: 40%;
+			margin: 0 auto;
+		}
+		img{
+			width: 100%;
+			object-fit: cover;
+			display: block;
+		}
+	}
+}

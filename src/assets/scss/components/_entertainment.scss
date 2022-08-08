@@ -1,0 +1,133 @@
+.entertainment-tab{
+	position: relative;
+	&:before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		@include absolute(0, 100%, 0);
+		z-index: 1;
+		background: $off-white;
+	}
+	.card{
+		padding: 0;
+	}
+	.info-wrap{
+		padding: 30px 15px;
+		border-bottom: 1px solid $gray;
+		&:last-child{
+			border-bottom: 0;
+			@media all and (min-width: 1440px){
+				margin-bottom: 7px;
+			}
+		}
+		@media all and (min-width: 992px){
+			padding: 50px 31px 42px;
+		}
+		@media all and (min-width: 1440px){
+			margin-bottom: -12px;
+		}
+		h4{
+			margin-bottom: 10px;
+		}
+		.date-wrap{
+			color: $gray-2;
+			font-weight: $fw-bold;
+			letter-spacing: 0.1px;
+			margin-bottom: 26px;
+		}
+		p{
+			line-height: 1.5;
+			color: $gray-5;
+			letter-spacing: 0.1px;
+		}
+	}
+	.slick-slider{
+		margin-bottom: 50px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 114px;
+		}
+		a{
+			display: block;
+			cursor: pointer;
+		}
+		.slide{
+			outline: 0;
+			box-shadow: none;
+		}
+		.img-wrap{
+			margin-bottom: 7px;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+		}
+		.contains-video{
+			a{
+				position: relative;
+				video, img{
+					width: 100%;
+					height: 203px;
+					object-fit: cover;
+					display: block;
+				}
+				&.active{
+					opacity: 1;
+					.video-wrapper{
+						display: block;
+					}
+				}
+			}
+			.video-wrapper{
+				display: none;
+				background: $gray-3-transparent;
+				width: 100%;
+				height: 100%;
+				@include absolute(0, 0);
+				z-index: 1;
+				cursor: pointer;
+				&.play{
+					background: $gray-3-transparent url(../../images/icons/icon-play.svg) no-repeat center;
+				}
+				&.pause{
+					background: $gray-3-transparent url(../../images/icons/icon-pause.svg) no-repeat center;
+				}
+			}
+		}
+		p{
+			text-align: center;
+			color: $gray-5;
+			padding: 0 20px;
+		}
+		.slick-arrow{
+			bottom: auto;
+			top: calc(50% - 7px);
+			@media all and (min-width: 992px){
+				top: calc(50% - 12px);
+			}
+			@media all and (min-width: 1200px){
+				top: calc(50% - 16px);
+			}
+		}
+	}
+	.certificate-slider{
+		.img-wrap{
+			height: 210px;
+			a{
+				height: 100%;
+				cursor: pointer;
+				img, video{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+	& > h4{
+		color: $gray-5;
+		letter-spacing: -0.3px;
+		margin-bottom: 21px;
+	}
+}

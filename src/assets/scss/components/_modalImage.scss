@@ -1,0 +1,108 @@
+.card-wrapper{
+	position: relative;
+	display: flex;
+	padding: 0 20px;
+	width: 100%;
+	max-width: 918px;
+	@media all and (min-width: 992px){
+		padding: 0;
+	}
+	.portfolio-card{
+		display: block;
+		padding: 0;
+		max-width: 100% !important;
+		margin: auto !important;
+		max-height: calc(100% - 40px);
+		.img-wrap{
+			height: 350px;
+			@media all and (min-width: 768px){
+				height: 600px;
+			}
+			@media all and (min-width: 992px){
+				height: 425px;
+			}
+			@media all and (min-width: 1440px){
+				height: 500px;
+			}
+			img, video{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+		}
+		.info-wrap{
+			padding: 10px 55px 10px 15px;
+			position: relative;
+			@media all and (min-width: 768px){
+				padding: 19px 115px 19px 25px;
+			}
+			p{
+				color: $gray-5;
+			}
+			.btn-wrap{
+				@include absolute(5px, 10px);
+				z-index: 1;
+				@media all and (min-width: 768px){
+					top: 15px;
+					right: 25px;
+				}
+				button{
+					background: transparent;
+					outline: 0;
+					display: block;
+					.icon-bin{
+						background: url(../../images/icons/icon-bin-3.svg) no-repeat;
+						width: 32px;
+						height: 32px;
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	& > .btn-wrap{
+		@include absolute(calc(50% - 12px), -6px);
+		z-index: 1;
+		@media all and (min-width: 768px){
+			top: calc(50% - 25px);
+		}
+		@media all and (min-width: 992px){
+			right: -28px;
+		}
+		@media all and (min-width: 1200px){
+			right: -108px;
+		}
+		&.prev{
+			right: auto;
+			left: -6px;
+			@media all and (min-width: 992px){
+				left: -28px;
+			}
+			@media all and (min-width: 1200px){
+				left: -108px;
+			}
+			button{
+				.icon-arrow{
+					transform: rotate(180deg);
+				}
+			}
+		}
+		button{
+			background: transparent;
+			outline: 0;
+			display: block;
+			.icon-arrow{
+				background: url(../../images/icons/icon-next.svg) no-repeat;
+				width: 25px;
+				height: 25px;
+				display: block;
+				background-size: cover;
+				@media all and (min-width: 768px){
+					width: 49px;
+					height: 49px;
+				}
+			}
+		}
+	}
+}

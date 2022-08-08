@@ -1,0 +1,167 @@
+.login-security {
+  padding: 20px 0 40px;
+  @media all and (min-width: 1200px) {
+    padding: 26px 0 80px;
+  }
+  @media all and (min-width: 1440px) {
+    padding-bottom: 150px;
+  }
+  .breadcrumb {
+    @media all and (min-width: 1200px) {
+      margin-bottom: 32px;
+    }
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+    @media all and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+    @media all and (min-width: 1200px) {
+      margin-bottom: 38px;
+      align-items: flex-start;
+    }
+    .heading-wrap {
+      width: 49%;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
+    .btn-wrap {
+      @media all and (min-width: 1200px) {
+        margin-top: 18px;
+      }
+      .btn {
+        font-weight: $fw-semibold;
+        @media all and (min-width: 768px) {
+          min-width: 170px;
+        }
+        @media all and (min-width: 1200px) {
+          min-width: 230px;
+        }
+        @media all and (min-width: 1440px) {
+          min-width: 240px;
+          padding: 5px 36px;
+        }
+      }
+    }
+  }
+  .login-info {
+    @media all and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .info-card {
+      padding: 10px;
+      margin-bottom: 20px;
+      @media all and (min-width: 768px) {
+        width: calc(50% - 4px);
+        padding: 20px;
+      }
+      @media all and (min-width: 1200px) {
+        padding: 48px 31px 55px;
+      }
+      @media all and (min-width: 1200px) {
+        padding: 48px 31px 59px;
+      }
+      .info-heading {
+        color: $gray-5;
+        font-weight: $fw-semibold;
+        margin-bottom: 20px;
+        letter-spacing: -0.2px;
+        @media all and (min-width: 768px) {
+          @include fontsize(18px);
+        }
+        @media all and (min-width: 992px) {
+          @include fontsize(20px);
+          margin-bottom: 23px;
+        }
+      }
+      .info-label {
+        display: block;
+        line-height: 1.5;
+        color: $gray-5;
+        margin-bottom: 8px;
+      }
+      .info-wrap {
+        display: block;
+        line-height: 1.5;
+        color: $gray-3;
+        font-weight: $fw-bold;
+        margin-bottom: 15px;
+        @media all and (min-width: 1200px) {
+          margin-bottom: 24px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &.edit {
+    .info-heading {
+      color: $gray-5;
+      font-weight: $fw-semibold;
+      margin-bottom: 20px;
+      letter-spacing: -0.2px;
+      @media all and (min-width: 768px) {
+        @include fontsize(18px);
+      }
+      @media all and (min-width: 992px) {
+        @include fontsize(20px);
+        margin-bottom: 23px;
+      }
+    }
+    .btns-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      @media all and (min-width: 768px) {
+        margin-top: 40px;
+        justify-content: flex-end;
+      }
+      .btn {
+        padding: 7px 43px;
+      }
+      .btn,
+      .secondary-btn {
+        @media all and (min-width: 992px) {
+          padding: 5px 89px 6px;
+        }
+        @media all and (min-width: 1200px) {
+          padding: 4px 89px;
+        }
+        @media all and (min-width: 1300px) and (max-width: 1400px) {
+          padding: 4px 86px;
+        }
+      }
+      .btn {
+        @media all and (min-width: 1200px) {
+          padding: 4px 99px;
+        }
+        @media all and (min-width: 1300px) and (max-width: 1400px) {
+          padding: 4px 95px;
+        }
+      }
+      .secondary-btn {
+        margin-right: 24px;
+      }
+    }
+  }
+  &.edit {
+    .otp-btn {
+      color: $blue;
+      text-transform: capitalize;
+    }
+    .number-detail {
+      color: $gray-2;
+    }
+    .verify-btn {
+      color: $green;
+      padding: 5px 0;
+    }
+  }
+}

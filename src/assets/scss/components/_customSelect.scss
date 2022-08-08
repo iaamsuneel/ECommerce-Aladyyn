@@ -1,0 +1,49 @@
+.custom-select{
+	position: relative;
+	.custom-select_header{
+		color: $white;
+		font-weight: $fw-bold;
+		display: flex;
+		align-items: center;
+		text-transform: capitalize;
+		.icon-location{
+			display: block;
+			background: url(../../images/icons/icon-location-tag.svg) no-repeat;
+			width: 18px;
+			height: 24px;
+			margin-right: 8px;
+		}
+		.icon-down{
+			display: block;
+			background: url(../../images/icons/icon-down-white.svg) no-repeat;
+			width: 12px;
+			height: 8px;
+			margin-left: 4px;
+			margin-top: 3px;
+			transition: 0.3s;
+			&.showing-options{
+				transform: rotate(180deg)
+			}
+		}
+	}
+	.custom-select_options{
+		@include absolute(100%, 0);
+		z-index: 1;
+		min-width: 100%;
+		width: 150px;
+		background: $white;
+		@include radius(4px);
+		box-shadow: 0 2px 8px rgba($color: #000000, $alpha: 0.4);
+		padding: 10px;
+		overflow: auto;
+		max-height: 300px;
+		.custom-select_option{
+			line-height: 1;
+			margin-bottom: 10px;
+			text-transform: capitalize;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}

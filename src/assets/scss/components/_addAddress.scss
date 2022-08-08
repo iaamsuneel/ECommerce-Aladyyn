@@ -1,0 +1,137 @@
+.add-address{
+	&.card{
+		@media all and (min-width: 1200px){
+			padding-left: 18px;
+			padding-right: 18px;
+		}
+	}
+	.select-wrap{
+		margin-bottom: 20px;
+		position: relative;
+		@media all and (min-width: 1200px){
+			margin-bottom: 30px;
+		}
+	}
+	.inputs-wrapper{
+		margin: 0;
+		.input-wrapper{
+			margin-bottom: 30px;
+			@media all and (min-width: 1200px){
+				margin-bottom: 35px;
+			}
+			&.col-lg-5-fix{
+				@media all and (min-width: 1200px){
+					max-width: 275px;
+				}
+			}
+			&.col-lg-2-fix{
+				@media all and (min-width: 1200px){
+					max-width: 112px;
+				}
+			}
+		}
+		.select-wrap{
+			margin-bottom: 0;
+		}
+		&.mobile-fix{
+			border-bottom: 1px solid $gray;
+			margin-top: 20px;
+			@media all and (min-width: 768px){
+				border: 0;
+			}
+			&.last{
+				border: 0;
+			}
+		}
+		.show-star{
+			&:before{
+				position: relative;
+				top: -2px;
+			}
+		}
+	}
+	.timing-wrap{
+		margin-bottom: 30px;
+		@media all and (min-width: 992px){
+			position: relative;
+			padding-right: 160px;
+		}
+		@media all and (min-width: 1200px){
+			margin-top: -23px;
+			margin-bottom: 56px;
+		}
+		.input-wrapper{
+			@media all and (min-width: 1200px){
+				margin-bottom: 20px;
+			}
+			select{
+				text-transform: capitalize;
+			}
+		}
+	}
+	.add-day{
+		margin-bottom: 20px;
+		@media all and (min-width: 992px){
+			@include absolute(auto, 5px, -1px);
+		}
+		@media all and (min-width: 1200px){
+			right: 30px;
+		}
+		.add-btn{
+			color: $blue;
+			text-decoration: underline;
+			&:before{
+				display: inline-block;
+				content: '';
+				background: url(../../images/icons/icon-plus-3.svg) no-repeat;
+				width: 14px;
+				height: 14px;
+				margin-right: 9px;
+			}
+		}
+	}
+	.btn-wrap{
+		@media all and (min-width: 1200px){
+			padding-right: 10px;
+		}
+	}
+	.select-wrap{
+		.react-select__value-container{
+			@media all and (min-width: 1200px){
+				padding: 0 0 0 10px;
+			}
+		}
+		.error{
+			top: 100%;
+		}
+	}
+	.input-wrap{
+		select{
+			background: url(../../images/icons/icon-down-4.svg) no-repeat;
+			background-position: calc(100% - 10px) 15px;
+
+		}
+	}
+}
+.seller-info{
+	.add-address{
+		button.remove-btn{
+			display: block;
+			margin: 0;
+			@media all and (min-width: 768px){
+				@include absolute(33px, 30px);
+				z-index: 1;
+			}
+			@media all and (min-width: 992px){
+				right: 18px;
+			}
+			@media all and (min-width: 1200px){
+				right: -22px;
+				top: 11px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				top: 9px;
+			}
+		}
+	}
+}

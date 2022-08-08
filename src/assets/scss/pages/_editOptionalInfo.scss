@@ -1,0 +1,71 @@
+.edit-information{
+	padding: 22px 0 40px;
+	@media all and (min-width: 1200px){
+		padding-bottom: 75px;
+	}
+	@media all and (min-width: 1300px) and (max-width: 1400px){
+		padding: 18px 0 40px;
+	}
+	h1{
+		letter-spacing: -0.2px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 50px;
+		}
+	}
+	.nav-tabs{
+		margin-bottom: 31px !important;
+	}
+	.card{
+		padding: 30px 10px;
+		margin-bottom: 8px;
+		@media all and (min-width: 768px){
+			padding: 30px;
+		}
+		@media all and (min-width: 1200px){
+			padding: 49px 32px 58px;
+		}
+		@media all and (min-width: 1300px) and (max-width: 1400px){
+			padding: 49px 30px 58px;
+		}
+	}
+	label{
+		@include fontsize(16px);
+		letter-spacing: 0.1px;
+		margin-bottom: 5px;
+		color: $gray-5;
+		@media all and (min-width: 1200px){
+			margin-bottom: 10px;
+		}
+	}
+	.btn-wrap{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		@media all and (min-width: 768px){
+			margin-top: 40px;
+			justify-content: flex-end;
+		}
+		.btn, .secondary-btn{
+			@media all and (min-width: 992px){
+				padding: 5px 89px 6px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 4px 89px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				padding: 4px 87px;
+			}
+		}
+		.btn{
+			@media all and (min-width: 1200px){
+				padding: 4px 99px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				padding: 4px 95px;
+			}
+		}
+		.secondary-btn{
+			margin-right: 22px;
+		}
+	}
+}

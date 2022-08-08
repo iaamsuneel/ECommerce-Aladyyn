@@ -1,0 +1,281 @@
+.checkout{
+	padding: 20px 0 30px;
+	@media all and (min-width: 768px){
+		padding: 46px 0 34px;
+	}
+	.back-btn{
+		margin-bottom: 24px;
+		a{
+			line-height: 1.75;
+			color: $blue;
+			.icon-back{
+				width: 16px;
+				height: 16px;
+				background: url(../../images/icons/icon-back.svg) no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
+		}
+	}
+	.checkout-wrap{
+		@media all and (min-width: 992px){
+			display: flex;
+			justify-content: space-between;
+		}
+		.checkout-left{
+			@media all and (min-width: 992px){
+				width: 62.7%;
+			}
+		}
+		.checkout-right{
+			@media all and (min-width: 992px){
+				width: 35%;
+				margin-top: 56px;
+			}
+			@media all and (min-width: 1200px){
+				margin-top: 62px;
+			}
+		}
+	}
+	.payment-method{
+		background: $white;
+		@include radius(4px);
+		box-shadow: 2px 4px 8px $gray-6-transparent;
+		padding: 15px;
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			padding: 25px 33px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 49px;
+		}
+		h3{
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				margin-bottom: 32px;
+			}
+		}
+		.payment-option{
+			display: flex;
+			color: $gray-5;
+			margin-bottom: 20px;
+			@media all and (min-width: 1200px){
+				margin-bottom: 35px;
+			}
+			.radio-btn{
+				margin-right: 10px;
+			}
+			.card-wrap{
+				width: 131px;
+				padding-top: 4px;
+				.info-wrap{
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+			.card-type{
+				width: 42px;
+				height: 32px;
+				margin-bottom: 10px;
+				img{
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			.card-name{
+				font-weight: $fw-bold;
+				margin-bottom: 10px;
+			}
+			.card-number{
+				letter-spacing: 0.4px;
+				margin-bottom: 8px;
+			}
+		}
+		.add-more{
+			button{
+				background: transparent;
+				padding: 0;
+				font-weight: $fw-semibold;
+				border-bottom: 1px solid $blue;
+				color: $blue;
+			}
+		}
+	}
+	h1{
+		letter-spacing: -0.3px;
+		margin-bottom: 23px;
+	}
+	.order-list{
+		li{
+			background: $white;
+			@include radius(4px);
+			box-shadow: 2px 4px 8px $gray-6-transparent;
+			overflow: hidden;
+			padding: 15px;
+			margin-bottom: 8px;
+			@media all and (min-width: 768px){
+				padding: 0;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.item-img{
+				width: 100px;
+				height: 100px;
+				margin-bottom: 20px;
+				@media all and (min-width: 768px){
+					width: 252px;
+					height: 162px;
+					margin-bottom: 0;
+				}
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					display: block;
+				}
+			}
+			.item-info{
+				@media all and (min-width: 768px){
+					width: calc(100% - 252px);
+					padding: 17px 24px;
+					display: flex;
+					flex-direction: column;
+				}
+			}
+			.product-name{
+				a{
+					color: $gray-3;
+					font-weight: $fw-semibold;
+					@media all and (min-width: 768px){
+						@include fontsize(18px);
+					}
+					@media all and (min-width: 992px){
+						@include fontsize(20px);
+					}
+				}
+			}
+			.product-provider{
+				font-weight: $fw-bold;
+				color: $gray-2;
+				margin-bottom: 20px;
+			}
+			.product-price{
+				font-weight: $fw-bold;
+				@media all and (min-width: 768px){
+					@include fontsize(18px);
+					margin-top: auto;
+				}
+				@media all and (min-width: 992px){
+					@include fontsize(20px);
+				}
+				@media all and (min-width: 1200px){
+					@include fontsize(24px);
+				}
+				.quantity{
+					@include fontsize(14px);
+					font-weight: $fw-bold;
+					color: $gray-2;
+					@media all and (min-width: 768px){
+						@include fontsize(16px);
+					}
+					@media all and (min-width: 992px){
+						@include fontsize(18px);
+					}
+					@media all and (min-width: 1200px){
+						@include fontsize(20px);
+					}
+				}
+			}
+		}
+	}
+	.cart-cta{
+		box-shadow: 2px 4px 8px rgba(89, 97, 117, 0.08);
+		@include radius(4px);
+		background: $white;
+		padding: 15px;
+		@media all and (min-width: 1200px){
+			padding: 24px;
+		}
+		.cart-heading{
+			color: $gray-3;
+			font-weight: $fw-bold;
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				@include fontsize(18px);
+			}
+			@media all and (min-width: 992px){
+				@include fontsize(20px);
+			}
+			@media all and (min-width: 1200px){
+				@include fontsize(24px);
+			}
+		}
+		.coupon-wrap{
+			margin-bottom: 49px;
+			position: relative;
+			.inputs-wrap{
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				.input-wrap{
+					width: calc(100% - 128px);
+					label{
+						margin-bottom: 10px;
+					}
+				}
+				.btn-wrap{
+					.secondary-btn{
+						min-width: 120px;
+						padding: 6px 10px;
+						@include fontsize(16px);
+						font-weight: $fw-bold;
+					}
+				}
+			}
+			&:after{
+				content: '';
+				width: 100%;
+				height: 1px;
+				background: $gray;
+				@include absolute(calc(100% + 24px), 0, auto, 0);
+				z-index: 1;
+			}
+		}
+		.total-wrap{
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 32px;
+			.text-wrap{
+				font-weight: $fw-bold;
+				@media all and (min-width: 992px){
+					margin-top: 3px;
+				}
+			}
+			.amount-wrap{
+				font-weight: $fw-bold;
+				@media all and (min-width: 768px){
+					@include fontsize(18px);
+				}
+				@media all and (min-width: 992px){
+					@include fontsize(20px);
+				}
+				@media all and (min-width: 1200px){
+					@include fontsize(24px);
+				}
+			}
+		}
+		.btn-wrap{
+			display: flex;
+			justify-content: end;
+			.btn{
+				@include fontsize(16px);
+				font-weight: $fw-bold;
+				min-width: 156px;
+				padding: 7px 10px;
+			}
+		}
+	}
+}

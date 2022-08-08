@@ -1,0 +1,203 @@
+.user-profile{
+	padding: 20px 0 40px;
+	@media all and (min-width: 1200px){
+		padding-bottom: 60px;
+	}
+	.section-head{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 38px;
+		}
+		.heading-wrap{
+			width: 49%;
+		}
+		h1{
+			margin-bottom: 0;
+		}
+		.btn-wrap{
+			.btn{
+				font-weight: $fw-semibold;
+				@media all and (min-width: 768px){
+					min-width: 170px;
+				}
+				@media all and (min-width: 1200px){
+					min-width: 230px;
+				}
+				@media all and (min-width: 1440px){
+					min-width: 240px;
+					padding: 5px 36px;
+				}
+			}
+		}
+	}
+	.account-info{
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		.account-card{
+			padding: 10px;
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				width: calc(50% - 4px);
+				padding: 20px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 48px 31px 55px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 48px 31px 71px;
+			}
+			.account-heading{
+				color: $gray-5;
+				font-weight: $fw-semibold;
+				margin-bottom: 20px;
+				letter-spacing: -0.2px;
+				@media all and (min-width: 768px){
+					@include fontsize(18px);
+				}
+				@media all and (min-width: 992px){
+					@include fontsize(20px);
+					margin-bottom: 23px;
+				}
+			}
+			.info-label{
+				display: block;
+				line-height: 1.5;
+				color: $gray-5;
+				margin-bottom: 8px;
+			}
+			.info-wrap{
+				display: block;
+				line-height: 1.5;
+				color: $gray-3;
+				font-weight: $fw-bold;
+				margin-bottom: 15px;
+				@media all and (min-width: 1200px){
+					margin-bottom: 24px;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	.profile-img{
+		position: relative;
+		width: 140px;
+		height: 120px;
+		@media all and (min-width: 1200px){
+			margin-top: 19px;
+		}
+		.img-wrap{
+			width: 120px;
+			height: 100%;
+			overflow: hidden;
+			@include radius(50%);
+			position: relative;
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&:after{
+				display: block;
+				content: '';
+				width: 100%;
+				height: 100%;
+				border: 1px solid $gray-9;
+				@include absolute(0, 0, 0, 0);
+				@include radius(50%);
+				z-index: 1;
+			}
+		}
+		.file-input{
+			@include absolute(0, 0, 0, 0);
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+			cursor: pointer !important;
+			form{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			input{
+				display: block;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				cursor: pointer;
+				font-size: 0;
+			}
+		}
+		.btn-wrap{
+			overflow: hidden;
+			width: 40px;
+			height: 40px;
+			display: block;
+			@include radius(50%);
+			border: 1px solid $gray-9;
+			@include absolute(53px, 1px);
+			z-index: 2;
+			background: $white;
+			.icon-plus{
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: url(../../images/icons/icon-plus-3.svg) no-repeat;
+				background-position: center;
+			}
+		}
+	}
+	&.edit{
+		.account-card{
+			width: 100%;
+			@media all and (min-width: 1200px){
+				padding: 48px 31px;
+			}
+		}
+		.btns-wrap{
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+			@media all and (min-width: 768px){
+				margin-top: 40px;
+				justify-content: flex-end;
+			}
+			.btn{
+				padding: 7px 43px;
+			}
+			.btn, .secondary-btn{
+				@media all and (min-width: 992px){
+					padding: 5px 89px 6px;
+				}
+				@media all and (min-width: 1200px){
+					padding: 4px 89px;
+				}
+				@media all and (min-width: 1300px) and (max-width: 1400px){
+					padding: 4px 86px;
+				}
+			}
+			.btn{
+				@media all and (min-width: 1200px){
+					padding: 4px 99px;
+				}
+				@media all and (min-width: 1300px) and (max-width: 1400px){
+					padding: 4px 95px;
+				}
+			}
+			.secondary-btn{
+				margin-right: 24px;
+			}
+		}
+	}
+}

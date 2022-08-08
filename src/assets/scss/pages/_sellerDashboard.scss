@@ -1,0 +1,139 @@
+.seller-dashboard, .user-dashboard{
+	padding: 0 0 40px;
+	position: relative;
+	@media all and (min-width: 992px){
+		padding: 150px 0 70px;
+	}
+	@media all and (min-width: 1200px){
+		padding: 133px 0 111px;
+	}
+	.container{
+		padding-top: 30px;
+		@media all and (min-width: 992px){
+			padding-top: 0;
+		}
+	}
+	h2{
+		letter-spacing: -0.5px;
+		@media all and (min-width: 1200px){
+			padding: 0 12px;
+		}
+	}
+	.dashboard-wrapper{
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		@media all and (min-width: 1200px){
+			padding: 0 12px;
+		}
+	}
+	.dashboard-card{
+		margin-bottom: 20px;
+		padding: 0 !important;
+		@media all and (min-width: 768px){
+			width: calc(50% - 15px);
+			margin-bottom: 30px;
+			padding: 17px 13px 17px 16px;
+		}
+		@media all and (min-width: 992px){
+			width: calc(25% - 20px);
+			margin-bottom: 26px;
+		}
+		a{
+			display: block;
+			padding: 10px;
+			height: 100%;
+			@media all and (min-width: 768px){
+				padding: 17px 13px 17px 16px;
+			}
+		}
+		.wrap-icon{
+			margin-bottom: 14px;
+		}
+		.icon-person{
+			display: block;
+			background: url(../../images/icons/icon-user.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		h4{
+			letter-spacing: -0.3px;
+			margin-bottom: 2px;
+		}
+		.service-details{
+			color: $gray-5;
+			line-height: 1.5;
+		}
+		.icon-comment{
+			display: block;
+			background: url(../../images/icons/icon-comment.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		.icon-bag{
+			display: block;
+			background: url(../../images/icons/icon-bag.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		.icon-plus{
+			display: block;
+			background: url(../../images/icons/icon-plus.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		.icon-lock{
+			display: block;
+			background: url(../../images/icons/icon-lock.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		.icon-card{
+			display: block;
+			background: url(../../images/icons/icon-card.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		.icon-snippet{
+			display: block;
+			background: url(../../images/icons/icon-snippet.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		.icon-question{
+			display: block;
+			background: url(../../images/icons/icon-question.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+		&.faded{
+			.icon-comment{
+				background: url(../../images/icons/icon-comment-faded.svg) no-repeat;
+			}
+			.icon-bag{
+				background: url(../../images/icons/icon-bag-faded.svg) no-repeat;
+			}
+			.icon-plus{
+				background: url(../../images/icons/icon-plus-faded.svg) no-repeat;
+			}
+			h4{
+				color: $gray-2;
+			}
+			.service-details{
+				color: $gray-2;
+			}
+		}
+		&.faded{
+			a{
+				cursor: initial;
+			}
+		}
+	}
+	&.not-approved{
+		@media all and (min-width: 992px){
+			padding-top: 89px;
+		}
+	}
+}

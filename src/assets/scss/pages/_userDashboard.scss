@@ -1,0 +1,33 @@
+.user-dashboard{
+	@media all and (min-width: 992px){
+		overflow: hidden;
+		padding-top: 89px;
+	}
+	@media all and (min-width: 1200px){
+		padding-bottom: 219px;
+	}
+	.container{
+		@media all and (min-width: 1440px){
+			max-width: 1223px;
+		}
+	}
+	.dashboard-wrapper{
+		@media all and (min-width: 992px){
+			margin-right: -26px;
+			justify-content: flex-start;
+		}
+	}
+	.dashboard-card{
+		@media all and (min-width: 992px){
+			width: calc(25% - 26px);
+			margin-right: 26px;
+			min-height: 162px;
+		}
+		.icon-home{
+			display: block;
+			background: url(../../images/icons/icon-home-2.svg) no-repeat;
+			width: 40px;
+			height: 40px;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.alert{
+	&.alert-warning{
+		padding: 1rem;
+		margin-bottom: 0;
+		@include radius(2px);
+		border: 1px soli $yellow;
+		background: $yellow-light;
+		@media all and (min-width: 992px){
+			@include absolute(0, 0, auto, 0);
+			z-index: 1;
+		}
+		.warning-header{
+			display: flex;
+			justify-content: space-between;
+			padding-right: 60px;
+		}
+		.icon-warning{
+			display: block;
+			width: 24px;
+			height: 21px;
+			background: url(../../images/icons/icon-warning.svg) no-repeat;
+		}
+		.heading-wrap{
+			width: calc(100% - 32px);
+			margin-bottom: 3px;
+			h4{
+				letter-spacing: -0.2px;
+				color: $gray-3;
+			}
+		}
+		p{
+			letter-spacing: 0.03px;
+			color: $gray-5;
+		}
+		.btn-wrap{
+			@include absolute(10px, 19px);
+			z-index: 1;
+			button{
+				background: transparent;
+				border: 0;
+				outline: 0;
+				display: block;
+				padding: 10px;
+			}
+			.icon-cross{
+				display: block;
+				background: url(../../images/icons/icon-cross-2.svg);
+				width: 13px;
+				height: 13px;
+			}
+		}
+	}
+}

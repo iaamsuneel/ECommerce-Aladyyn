@@ -1,0 +1,51 @@
+// .Toastify__toast-container{
+// 	&.modal-backdrop{
+// 		position: fixed !important;
+// 		left: 0 !important;
+// 		right: 0 !important;
+// 		bottom: 0 !important;
+// 		top: 0 !important;
+// 		width: 100% !important;
+// 		align-items: center !important;
+// 	}
+// 	&.Toastify__toast-container--top-center{
+// 		transform: translateX(0) !important;
+// 	}
+// 	.Toastify__toast-body{
+// 		& > div{
+// 			text-transform: capitalize;
+// 			text-align: center;
+// 			@include fontsize(16px);
+// 			color: $gray-2;
+// 		}
+// 	}
+// 	.Toastify__toast{
+// 		background: $white;
+// 		@include radius(0px);
+// 		width: 100%;
+// 		max-width: 360px;
+// 		padding: 15px;
+// 		border: 1px solid transparent;
+// 		@media all and (min-width: 768px){
+// 			padding: 47px 39px 43px;
+// 		}
+// 		&.Toastify__toast--error{
+// 			border-color: $red-3;
+// 		}
+// 		&.Toastify__toast--success{
+// 			border-color: $green;
+// 		}
+// 	}
+// 	.Toastify__close-button{
+// 		@include absolute(10px, 10px);
+// 	}
+// 	.Toastify__toast-icon{
+// 		display: none;
+// 	}
+// 	.Toastify__progress-bar--success{
+// 		background: $green;
+// 	}
+// 	.Toastify__progress-bar--error{
+// 		background: $red-3;
+// 	}
+// }

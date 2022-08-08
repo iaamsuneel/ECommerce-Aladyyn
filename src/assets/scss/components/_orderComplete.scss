@@ -1,0 +1,70 @@
+.complete-order_popup{
+	background: $gray-12;
+	text-align: center;
+	padding: 15px;
+	width: 100%;
+	max-width: 360px;
+	margin: auto;
+	@media all and (min-width: 768px){
+		padding: 28px 30px;
+	}
+	h4{
+		padding: 0 40px;
+		font-weight: $fw-bold;
+		letter-spacing: -0.2px;
+		margin-bottom: 6px;
+		@media all and (min-width: 768px){
+			@include fontsize(20px);
+		}
+	}
+	p{
+		color: $gray-2;
+		opacity: 0.9;
+		margin-bottom: 22px;
+	}
+	.rating-input{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 24px;
+		border: 1px solid red;
+		padding: 24px 10px 13px;
+		button{
+			background: transparent;
+			display: block;
+			margin: 0 7px;
+			.icon-star{
+				background: url(../../images/icons/icon-star-empty.svg) no-repeat;
+				width: 32px;
+				height: 32px;
+				display: block;
+			}
+			&.selected{
+				.icon-star{
+					background: url(../../images/icons/icon-star-2.svg) no-repeat;
+				}
+			}
+		}
+	}
+	.wrap-btn{
+		margin-bottom: 16px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+		button{
+			background: transparent;
+			width: 100%;
+			color: $gray-3;
+			@include fontsize(14px);
+			letter-spacing: 0.4px;
+			&.remind-later{
+				color: $blue;
+				letter-spacing: 0;
+				font-weight: $fw-medium;
+				@include fontsize(16px);
+				@media all and (min-width: 768px){
+					@include fontsize(18px);
+				}
+			}
+		}
+	}
+}

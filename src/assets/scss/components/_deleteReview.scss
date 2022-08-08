@@ -1,0 +1,33 @@
+.delete-review{
+	background: $gray-12;
+	text-align: center;
+	width: 100%;
+	max-width: 360px;
+	padding: 15px;
+	margin: auto;
+	@media all and (min-width: 768px){
+		padding: 39px 51px;
+	}
+	h4{
+		padding: 0 10px;
+		line-height: 1.2;
+		margin-bottom: 5px;
+		@media all and (min-width: 1200px){
+			@include fontsize(20px);
+		}
+	}
+	p{
+		color: $gray-2;
+		margin-bottom: 32px;
+	}
+	.btns-wrap{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		a{
+			padding: 7px 10px;
+			width: calc(50% - 5px);
+			@include fontsize(16px);
+		}
+	}
+}

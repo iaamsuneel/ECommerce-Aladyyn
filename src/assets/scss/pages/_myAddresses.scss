@@ -1,0 +1,196 @@
+.my-addresses{
+	padding: 20px 0 40px;
+	.breadcrumb{
+		@media all and (min-width: 1200px){
+			margin-bottom: 55px;
+		}
+	}
+	.section-head{
+		margin-bottom: 20px;
+		@media all and (min-width: 576px){
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		@media all and (min-width: 768px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 41px;
+		}
+		.heading-wrap{
+			@media all and (min-width: 567px){
+				width: 49%;
+			}
+		}
+		h1{
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+			}
+		}
+		.btn-wrap{
+			.btn{
+				font-weight: $fw-semibold;
+				width: 100%;
+				@media all and (min-width: 768px){
+					min-width: 170px;
+				}
+				@media all and (min-width: 1200px){
+					min-width: 230px;
+				}
+				@media all and (min-width: 1440px){
+					min-width: 240px;
+					padding: 5px 36px;
+				}
+			}
+		}
+	}
+	.address-block{
+		margin-bottom: 30px;
+		.heading-wrap{
+			position: relative;
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				margin-bottom: 30px;
+			}
+			.wrap-icon{
+				@include absolute(3px, auto, auto, 0);
+				z-index: 1;
+				&.home{
+					top: -6px;
+					left: -7px;
+				}
+			}
+			.icon-home{
+				background: url(../../images/icons/icon-home.svg) no-repeat;
+				width: 34px;
+				height: 34px;
+				display: block;
+			}
+			.icon-office{
+				background: url(../../images/icons/icon-bag-2.svg) no-repeat;
+				width: 20px;
+				height: 17px;
+				display: block;
+			}
+			h4{
+				padding-left: 34px
+			};
+		}
+		.address-card{
+			padding: 15px;
+			position: relative;
+			@media all and (min-width: 768px){
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 24px 35px;
+			}
+			@media all and (min-width: 1200px){
+				padding-bottom: 49px;
+			}
+			.country-wrap, .state-wrap, .city-wrap{
+				margin-bottom: 20px;
+				@media all and (min-width: 768px){
+					margin-bottom: 0;
+					width: 16%;
+				}
+			}
+			.country-wrap{
+				padding-right: 50px;
+				@media all and (min-width: 768px){
+					padding-right: 0;
+				}
+			}
+			.address-wrap{
+				@media all and (min-width: 768px){
+					width: 47%;
+					padding-right: 50px;
+				}
+				.address-info{
+					@media all and (min-width: 1200px){
+						padding-left: 6px;
+					}
+				}
+			}
+			.address-label{
+				display: block;
+				color: $gray-5;
+				margin-bottom: 14px;
+			}
+			.address-info{
+				display: block;
+				font-weight: $fw-bold;
+				text-transform: capitalize;
+				&.not-applicable{
+					color: $gray-5;
+				}
+			}
+			.more-wrap{
+				@include absolute(10px, 15px);
+				z-index: 1;
+				@media all and (min-width: 768px){
+					top: calc(50% - 15px);
+					right: 40px;
+				}
+				.menu-wrap{
+					margin-top: 0;
+				}
+				.menu-btn{
+					background: transparent;
+					outline: none;
+					padding: 0;
+					width: 30px;
+					height: 30px;
+					.icon-ellipsis{
+						display: block;
+						width: 100%;
+						height: 100%;
+						background: url(../../images/icons/icon-ellipsis.svg) no-repeat;
+						background-position: center;
+					}
+				}
+			}
+		}
+	}
+	&.add{
+		.card{
+			display: block;
+		}
+		.btns-wrap{
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+			@media all and (min-width: 768px){
+				margin-top: 40px;
+				justify-content: flex-end;
+			}
+			.btn{
+				padding: 7px 43px;
+			}
+			.btn, .secondary-btn{
+				@media all and (min-width: 992px){
+					padding: 5px 89px 6px;
+				}
+				@media all and (min-width: 1200px){
+					padding: 4px 89px;
+				}
+				@media all and (min-width: 1300px) and (max-width: 1400px){
+					padding: 4px 86px;
+				}
+			}
+			.btn{
+				@media all and (min-width: 1200px){
+					padding: 4px 99px;
+				}
+				@media all and (min-width: 1300px) and (max-width: 1400px){
+					padding: 4px 95px;
+				}
+			}
+			.secondary-btn{
+				margin-right: 24px;
+			}
+		}
+	}
+}

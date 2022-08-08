@@ -1,0 +1,96 @@
+.rdt_Table{
+	border: 1px solid $gray;
+	@include radius(2px);
+	.rdt_TableHead{
+		.rdt_TableHeadRow{
+			background:  $gray-4;
+			border-bottom: 1px solid $gray;
+			min-height: 56px;
+		}
+	}
+	.rdt_TableBody{
+		.rdt_TableRow{
+			border-bottom: 1px solid $gray;
+			min-height: 58px;
+		}
+	}
+	.rdt_TableCol, .rdt_TableCell{
+		&:first-child{
+			flex: 0 0 30px;
+			min-width: 30px;
+		}
+		input{
+			width: 16px;
+			height: 16px;
+			background: $white;
+			border: 1px solid $gray;
+			@include radius(2px);
+			appearance: auto;
+		}
+		&:nth-child(2){
+			min-width: 212px;
+		}
+		&:nth-child(3){
+			@media all and (min-width: 1440px){
+				min-width: 210px;
+			}
+		}
+		&:nth-child(4){
+			@media all and (min-width: 1440px){
+				min-width: 210px;
+			}
+		}
+		&:nth-child(5){
+			min-width: 209px;
+		}
+		&:last-child{
+			min-width: 198px;
+		}
+	}
+	.rdt_TableCol{
+		@include fontsize(16px);
+		font-weight: $fw-bold;
+		color: $gray-3;
+		span{
+			font-size: 0;
+			background: url(../../images/icons/icon-up-down.svg);
+			background-size: cover;
+			width: 11px;
+			height: 22px;
+			margin-left: 8px;
+		}
+	}
+	.rdt_TableCell{
+		@include fontsize(16px);
+		color: $gray-3;
+	}
+	.more-link{
+		color: $blue;
+		border-bottom: 1px solid $blue;
+	}
+	.btn{
+		@include fontsize(13px);
+		padding: 3px 15px;
+		margin-right: 8px;
+		&:last-child{
+			margin-right: 0;
+		}
+		&.cancel-btn{
+			background: $white;
+			border-color: $red-2;
+			color: $red-2;
+		}
+	}
+	.status-wrap{
+		font-weight: $fw-bold;
+		&.in-progress, &.grey{
+			color: $gray-2;
+		}
+		&.completed, &.blue{
+			color: $blue;
+		}
+		&.canceled, &.red{
+			color: $red-2;
+		}
+	}
+}

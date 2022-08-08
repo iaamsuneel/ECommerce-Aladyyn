@@ -1,0 +1,36 @@
+.range-slider_wrapper{
+	& > div{
+		& > div {
+			position: relative;
+			&:after{
+				content: '';
+				@include absolute(-2px, auto, auto, calc(100% - 1px));
+				width: 8px;
+				height: 8px;
+				@include radius(50%);
+				background: $white;
+				border: 2px solid $gray;
+			}
+			& > div {
+				&:focus-visible{
+					outline: 0;
+				}
+				&:last-child{
+					width: 14px !important;
+					height: 14px !important;
+				}
+			}
+		}
+	}
+	.range-info{
+		display: flex;
+		justify-content: space-between;
+		@include fontsize(16px);
+		font-weight: $fw-bold;
+		& > div{
+			&:after{
+				display: none;
+			}
+		}
+	}
+}

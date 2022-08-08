@@ -1,0 +1,131 @@
+.edit-info{
+	h4{
+		@include fontsize(16px);
+		margin-bottom: 14px;
+	}
+	.input-block{
+		margin-bottom: 20px;
+		@media all and (min-width: 1200px){
+			margin-bottom: 34px;
+		}
+	}
+	.input-wrapper{
+		margin-bottom: 20px;
+		position: relative;
+		@media all and (min-width: 1200px){
+			margin-bottom: 0;
+		}
+	}
+	.col-lg-6-fix{
+		@media all and (min-width: 992px){
+			width: 44%;
+		}
+	}
+	.col-lg-2-fix{
+		@media all and (min-width: 992px){
+			width: 15.8%;
+		}
+	}
+	.col-lg-3-fix{
+		@media all and (min-width: 992px){
+			width: 24.4%;
+			padding-right: 10px;
+		}
+	}
+	.form-check{
+		@media all and (min-width: 768px){
+			margin-top: 32px;
+		}
+		@media all and (min-width: 992px){
+			margin-top: 23px;
+		}
+		@media all and (min-width: 1200px){
+			margin-top: 37px;
+		}
+	}
+	textarea{
+		padding: 7px 14px;
+		letter-spacing: 0.12px;
+	}
+	.word-limit{
+		@include absolute(auto, 14px, -20px);
+		@include fontsize(14px);
+		color: $gray-2;
+	}
+	.img-input{
+		@include fontsize(14px);
+	}
+	.add-more{
+		margin-top: 9px;
+		@media all and (min-width: 1200px){
+			padding: 0 16px;
+		}
+		a{
+			color: $blue;
+			font-weight: $fw-semibold;
+			&:before{
+				content: '';
+				display: inline-block;
+				margin-right: 7px;
+				width: 14px;
+				height: 14px;
+				background: url(../../images/icons/icon-plus-3.svg) no-repeat;
+			}
+			.text{
+				display: inline;
+				text-decoration: underline;
+			}
+			&:hover{
+				color: $blue;
+			}
+		}
+	}
+	.img-input-wrapper{
+		.img-input{
+			@media all and (min-width: 1200px){
+				width: 74% !important;
+			}
+		}
+		.img-info{
+			line-height: 1.230;
+			@media all and (min-width: 1200px){
+				width: 24%;
+			}
+			@media all and (min-width: 1440px){
+				padding-right: 40px;
+			}
+		}
+	}
+	.input-block{
+		&.margin-fix{
+			@media all and (min-width: 1200px){
+				margin-bottom: 37px;
+			}
+		}
+	}
+	.btn-wrap{
+		display: flex;
+		justify-content: center;
+		margin-top: 30px;
+		@media all and (min-width: 768px){
+			margin-top: 40px;
+			justify-content: flex-end;
+		}
+		.btn, .secondary-btn{
+			@media all and (min-width: 992px){
+				padding: 5px 89px 6px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 4px 89px;
+			}
+		}
+		.btn{
+			@media all and (min-width: 1200px){
+				padding: 4px 99px;
+			}
+		}
+		.secondary-btn{
+			margin-right: 22px;
+		}
+	}
+}

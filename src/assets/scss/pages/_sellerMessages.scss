@@ -1,0 +1,260 @@
+.seller-messages, .user-messages{
+    .container{
+        .section-header{
+            margin-bottom: 38px;
+            .header-left{
+                h1{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .messages-wrap{
+            padding-bottom: 30px;
+            @media all and (min-width: 1200px){
+                padding-bottom: 50px;
+            }
+            .messages-head{
+                border: 0.25px solid $gray;
+                border-radius: 4px;
+                form{
+                    .form-wrap{
+                        display: flex;
+                        overflow: auto;
+                        .msg-type{
+                            border-right: 1px solid $gray;
+                            color: $gray-5;
+                            @include fontsize(12px);
+                            white-space: nowrap;
+                            padding: 12px 5px;
+                            @media all and (min-width: 1200px){
+                                @include fontsize(16px);
+                                min-width: 156px;
+                                text-align: left;
+                                padding: 14px;
+                            }
+                            &.active{
+                                color: $blue;
+                                font-weight: $fw-bold;
+                                box-shadow: inset 0px -3px 0px #69A1F4;
+                            }
+                            &.unread{
+
+                            }
+                        }
+                        .search-input{
+                            border: none;
+                            @include fontsize(12px);
+                            width: 20%;
+                            min-width: 150px;
+                            padding: 0 5px;
+                            @media all and (min-width: 1200px){
+                                @include fontsize(16px);
+                                width: auto;
+                                padding: 0 11px;
+                            }
+                            &:focus{
+                                outline: none;
+                            }
+                            &::placeholder{
+                                color: $gray-2;
+                            }
+                        }
+                        .search-btn{
+                            padding: 6px 5px 0;
+                            border-left: 1px solid $gray;
+                            @media all and (min-width: 1200px){
+                                padding: 6px 11px 0;
+                            }
+                            .icon-magnifier{
+                                background: url(../../images/icons/icon-magnifier.svg) no-repeat center;
+                                width: 18px;
+                                height: 18px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+            .messages-collector{
+                .msg-box{
+                    background: $white;
+                    display: flex;
+                    padding: 10px 0 0 8px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    @media all and (min-width: 1200px){
+                        padding: 16px 0 0 32px;
+                    }
+                    &:hover{
+                        background: #F1F2F4;
+                    }
+                    &:nth-child(even){
+                        .msg-pic{
+                            background: #BAE7FF;
+                            color: #1890FF;
+                        }
+                    }
+                    &:last-child{
+                        .msg-data{
+                            border-bottom: none;
+                        }
+                    }
+                    .msg-pic{
+                        flex-shrink: 0;
+                        @include fontsize(18px);
+                        width: 40px;
+                        height: 40px;
+                        background: #D6E4FF;
+                        border: 1px solid #F1F2F4;
+                        border-radius: 50%;
+                        color: $blue;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 10px 10px 21px 0;
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            background: $gray;
+                            border: 1px solid $white;
+                            border-radius: 50%;
+                            width: 10px;
+                            height: 10px;
+                            content: "";
+                            @media all and (min-width: 768px){
+                                bottom: 4px;
+                                right: 4px;
+                            }
+                            @media all and (min-width: 1200px){
+                                width: 16px;
+                                height: 16px;
+                                bottom: -2px;
+                                right: 17px;
+                            }
+                        }
+                        &.online{
+                            &::after{
+                                background: #B7EB8F;
+                            }
+                        }
+                        @media all and (min-width: 768px){
+                            width: 64px;
+                            @include fontsize(22px);
+                            height: 64px;
+                        }
+                        @media all and (min-width: 1200px){
+                            width: 104px;
+                            @include fontsize(32px);
+                            height: 104px;
+                            margin: 18px 25px 21px 0;
+                        }
+                    }
+                    .msg-data{
+                        flex-grow: 1;
+                        border-bottom: 1px solid $gray;
+                        display: flex;
+                        .text-data{
+                            flex-grow: 1;
+                            padding-right: 10px;
+                            @media all and (min-width: 768px){
+                                padding-right: 0;
+                            }
+                            .tests-wrap{
+                                padding-right: 40px;
+                                li{
+
+                                }
+                            }
+                            .msg-name{
+                                color: $gray-3;
+                                font-weight: $fw-semibold;
+                                margin-bottom: 15px;
+                                @include fontsize(16px);
+                                @media all and (min-width: 1200px){
+                                    @include fontsize(20px);
+                                }
+                            }
+                            p{
+                                color: $gray-5;
+                                @include fontsize(14px);
+                                max-width: 800px;
+                                letter-spacing: 0.08px;
+                                @media all and (min-width: 1200px){
+                                    @include fontsize(16px);
+                                }
+                            }
+                        }
+                        .msg-edit{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            padding: 0 5px 21px;
+                            display: none;
+                            @media all and (min-width: 768px){
+                                display: flex;
+                            }
+                            .msg-number{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 32px;
+                                height: 32px;
+                                border-radius: 50%;
+                                color: $white;
+                                font-weight: $fw-bold;
+                                @include fontsize(14px);
+                                background: $blue;
+                                @media all and (min-width: 1200px){
+                                    @include fontsize(16px);
+                                    margin: 0 28px 3px 0;
+                                }
+                            }
+                            .msg-timing{
+                                white-space: nowrap;
+                                margin-right: 8px;
+                                color: $gray-2;
+                                @include fontsize(13px);
+                                font-weight: $fw-bold;
+                                @media all and (min-width: 1200px){
+                                    @include fontsize(16px);
+                                    margin: 0 28px 3px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pagination-wrap{
+                @media all and (min-width: 1200px){
+                    margin: 60px -5px 0 0;
+                }
+            }
+        }
+        .message-wrap{
+            position: relative;
+            &.unreaded-messages{
+                .msg-box{
+                    background: #F1F2F4;
+                }
+            }
+            .menu-wrap{
+                margin-top: 6px;
+                @include absolute(8px, 8px);
+                @media all and (min-width: 768px){
+                    top: 18px;
+                    right: 5px;
+                }
+                @media all and (min-width: 1200px){
+                    right: 18px;
+                }
+                z-index: 1;
+                .menu-btn{
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

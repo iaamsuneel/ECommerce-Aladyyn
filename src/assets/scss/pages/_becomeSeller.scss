@@ -1,0 +1,138 @@
+.become-seller{
+	padding: 26px 0;
+	@media all and (min-width: 992px){
+		padding-bottom: 50px;
+	}
+	@media all and (min-width: 1200px){
+		padding-bottom: 78px;
+	}
+	.card{
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 40px;
+		}
+	}
+	.section-header{
+		margin-bottom: 52px;
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		h1{
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+			}
+		}
+		.btn-wrap{
+			display: block;
+			text-align: left;
+		}
+	}
+	h4{
+		letter-spacing: -0.3px;
+		margin-bottom: 20px;
+		@media all and (min-width: 992px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 42px;
+		}
+	}
+	textarea{
+		min-height: 100px;
+		@media all and (min-width: 1200px){
+			min-height: 137px;
+		}
+	}
+	.btn-wrap{
+		display: flex;
+		justify-content: center;
+		@media all and (min-width: 768px){
+			justify-content: flex-end;
+		}
+		.btn{
+			@media all and (min-width: 992px){
+				padding: 5px 89px 6px;
+			}
+			@media all and (min-width: 1200px){
+				padding: 4px 89px;
+			}
+		}
+	}
+	.text-fix{
+		label{
+			text-transform: unset;
+		}
+	}
+	.input-block{
+		&.margin-fix{
+			margin-bottom: 10px;
+		}
+	}
+	.input-wrapper{
+		&.margin-fix{
+			margin-bottom: 15px;
+		}
+		&.img-input-fix{
+			@media all and (min-width: 1200px){
+				margin: 10px 0 20px;
+			}
+		}
+	}
+	.input-wrap{
+		&.password{
+			input{
+				padding-right: 40px;
+			}
+		}
+		.toggle-password{
+			@include absolute(11px, 10px);
+			z-index: 1;
+			.icon-eye{
+				cursor: pointer;
+				display: block;
+				width: 16px;
+				height: 16px;
+				background: url(../../images/icons/icon-eye-2.svg) no-repeat;
+				&.open{
+					background: url(../../images/icons/icon-eye-4.svg) no-repeat;
+				}
+			}
+		}
+	}
+	.contains-btn{
+		.input-wrap{
+			position: relative;
+			.form-control{
+				padding-right: 90px;
+			}
+		}
+		.btn-wrap{
+			@include absolute(5px, 0);
+			z-index: 1;
+			button{
+				padding: 7px 10px;
+				@include fontsize(14px);
+				color: $blue;
+				text-transform: capitalize;
+				background: transparent;
+			}
+		}
+	}
+	.company-tab, .freelancer-tab{
+		.form-check{
+			margin-top: 25px;
+			.invalid-feedback{
+				margin-left: -24px;
+			}
+		}
+		.form-check-label{
+			color: $gray-2
+		}
+	}
+}

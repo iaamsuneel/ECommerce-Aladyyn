@@ -1,0 +1,48 @@
+.response-popup{
+	background: $white;
+	text-align: center;
+	margin: auto;
+	padding: 15px;
+	border: 1px solid transparent;
+	width: 100%;
+	@media all and (min-width: 768px){
+		width: auto;
+		padding: 47px 39px 43px;
+	}
+	h4{
+		margin-bottom: 14px;
+	}
+	p{
+		color: $gray-2;
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 27px;
+		}
+	}
+	.btn{
+		width: 100%;
+		@include radius(2px);
+		@include fontsize(16px);
+		box-shadow: 0px 2px 4px rgba(86, 110, 146, 0.12);
+		@media all and (min-width: 768px){
+			min-width: 281px;
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	&.success{
+		border-color: $green;
+		.btn{
+			background: $green;
+			border-color: $green;
+		}
+	}
+	&.has-error{
+		border-color: $red-3;
+		.btn{
+			background: $red-2;
+			border-color: $red-2;
+		}
+	}
+}

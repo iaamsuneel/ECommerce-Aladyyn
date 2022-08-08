@@ -1,0 +1,314 @@
+.edit-service{
+    @media all and (min-width: 1200px){
+        padding-bottom: 22px;
+    }
+    .container{
+        .section-header{
+            border-bottom: 1px solid $gray;
+            @media all and (min-width: 768px){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 7px;
+                margin-bottom: 23px;
+            }
+            .header-left{
+                h1{
+                    color: $gray-3;
+                    font-weight: $fw-bold;
+                    margin-bottom: 0;
+                    @include fontsize(20px);
+                    @media all and (min-width: 1200px){
+                        @include fontsize(32px);
+                    }
+                }
+            }
+            .header-right{
+                margin: 15px 0;
+                @media all and (min-width: 768px){
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+                }
+                .btn{
+                    width: 100%;
+                    padding: 6px 17px 8px;
+                    line-height: 1.2;
+                    @media all and (min-width: 768px){
+                        width: auto;
+                    }
+                    .icon-plus{
+                        background: url(../../images/icons/icon-plus-4.svg);
+                        width: 14px;
+                        height: 14px;
+                        display: inline-block;
+                        margin: 0 7px -1px 0;
+                    }
+                }
+                .select-wrap{
+                    margin-bottom: 10px;
+                    @media all and (min-width: 768px){
+                        margin: 0 8px 0 0;
+                        max-width: 121px;
+                        min-width: 110px;
+                    }
+                    @media all and (min-width: 1200px){
+                        max-width: 181px;
+                        min-width: 150px;
+                    }
+                    & > div{
+                        
+                    }
+                    .react-select__single-value{
+                        @media all and (min-width: 1200px){
+                            @include fontsize(20px);
+                        }
+                    }
+                    .react-select__placeholder{
+                        @media all and (min-width: 1200px){
+                            @include fontsize(20px);
+                        }
+                    }
+                    .react-select__menu{
+                        min-width: 100% !important;
+                        display: block !important;
+                        & > div, & > span{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+        .services-inputs{
+            @media all and (min-width: 768px){
+                margin-bottom: 24px;
+            }
+        }
+        .edit-services{
+            padding-bottom: 50px;
+            .cards-wrap{
+                .edit-card{
+                    height: 100%;
+                    background: $white;
+                    box-shadow: 2px 4px 8px rgba(89, 97, 117, 0.08);
+                    border-radius: 4px;
+                    margin-bottom: 8px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                    @media all and (min-width: 768px){
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                    }
+                    @media all and (min-width: 992px){
+                    }
+                    .card-image{
+                        @media all and (min-width: 768px){
+                            width: 40%;
+                            max-width: 290px;
+                            height: 200px;
+                            &.height-fix{
+                                height: 100%;
+                            }
+                        }
+                        @media all and (min-width: 992px){
+                            max-width: 360px;
+                            height: 216px;
+                            &.height-fix{
+                                height: 100%;
+                            }
+                        }
+                        @media all and (min-width: 1300px) and (max-width: 1400px){
+                            max-width: 341px;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                            border-top-left-radius: 4px;
+                            border-top-right-radius: 4px;
+                            @media all and (min-width: 768px){
+                                border-top-right-radius: 0;
+                                border-bottom-left-radius: 4px;
+                            }
+                        }
+                    }
+                    .card-data{
+                        display: flex;
+                        align-items: flex-start;
+                        @media all and (min-width: 768px){
+                            width: calc(100% - 290px);
+                        }
+                        @media all and (min-width: 992px){
+                            width: calc(100% - 360px);
+                        }
+                        .service-information{
+                            padding: 12px 10px;
+                            @media all and (min-width: 1200px){
+                                padding: 16px;
+                            }
+                            .service-detail{
+                                color: $gray-3;
+                                font-weight: $fw-semibold;
+                                margin-bottom: 15px;
+                                @include fontsize(16px);
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                @media all and (min-width: 1200px){
+                                    @include fontsize(20px);
+                                    margin-bottom: 24px;
+                                }
+                            }
+                            .service-details{
+                                margin-bottom: 20px;
+                                @media all and (min-width: 768px){
+                                    margin-bottom: 10px;
+                                }
+                                @media all and (min-width: 1200px){
+                                    margin-bottom: 30px;
+                                    display: flex;
+                                    align-items: flex-start;
+                                }
+                                .location{
+                                    margin-bottom: 12px;
+                                    @media all and (min-width: 768px){
+                                        margin-bottom: 8px;
+                                    }
+                                    @media all and (min-width: 1200px){
+                                        min-width: 287px;
+                                        margin: 0 15px 0 0;
+                                    }
+                                    .main-location{
+                                        color: $gray-5;
+                                        font-weight: $fw-bold;
+                                        @include fontsize(14px);
+                                        margin-bottom: 5px;
+                                        @media all and (min-width: 1200px){
+                                            @include fontsize(16px);
+                                        }
+                                    }
+                                    .inner-location{
+                                        color: $gray-5;
+                                        @include fontsize(14px);
+                                        margin-bottom: 10px;
+                                        @media all and (min-width: 1200px){
+                                            @include fontsize(16px);
+                                        }
+                                    }
+                                }
+                                .service-time{
+                                    .time-info{
+                                        margin-bottom: 5px;
+                                        &:last-child{
+                                            margin-bottom: 0;
+                                        }
+                                        @media all and (min-width: 768px){
+                                            display: flex;
+                                            align-items: flex-start;
+                                        }
+                                        .days{
+                                            color: $gray-5;
+                                            @include fontsize(14px);
+                                            @media all and (min-width: 768px){
+                                                margin: 0 10px 0 0;
+                                                min-width: 143px;
+                                            }
+                                            @media all and (min-width: 1200px){
+                                                @include fontsize(16px);
+                                            }
+                                        }
+                                        .day-time{
+                                            white-space: nowrap;
+                                            color: $gray-5;
+                                            font-weight: $fw-bold;
+                                            @include fontsize(14px);
+                                            @media all and (min-width: 1200px){
+                                                @include fontsize(16px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .service-price{
+                                color: $gray-3;
+                                font-weight: $fw-bold;
+                                @include fontsize(20px);
+                                @media all and (min-width: 1200px){
+                                    @include fontsize(24px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pagination-wrap{
+                margin-top: 40px;
+            }
+        }
+    }
+}
+.menu-wrap{
+    position: relative;
+    margin-top: 16px;
+    @media all and (min-width: 1200px){
+        margin: 25px 12px 0 0;
+    }
+    .menu-btn{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        .btn-dot{
+            background: $blue;
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            margin: 0 3px;
+            @media all and (min-width: 1200px){
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        right: 4px;
+        min-width: 115px;
+        @media all and (min-width: 1200px){
+            right: -6px;
+            padding: 4px 0;
+        }
+        .menu-items{
+            background: $white;
+            border: 0.5px solid #F1F2F4;
+            box-shadow: 0px 2px 4px rgba(86, 110, 146, 0.12);
+            border-radius: 2px;
+            li{
+                .menu-option{
+                    width: 100%;
+                    display: block;
+                    text-align: right;
+                    color: $gray-3;
+                    padding: 2px 7px;
+                    @include fontsize(16px);
+                    transition: all 0.5s;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                    &.delete{
+                        color: $red-2;
+                    }
+                    @media all and (min-width: 1200px){
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+    }
+}

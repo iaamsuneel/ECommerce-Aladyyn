@@ -1,0 +1,215 @@
+.raise-invoice{
+	padding: 21px 0 40px;
+	@media all and (min-width: 1200px){
+		padding-bottom: 60px;
+	}
+	.breadcrumb{
+		@media all and (min-width: 1200px){
+			margin-bottom: 47px;
+		}
+	}
+	.section-head{
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 20px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 32px;
+		};
+		h1{
+			margin-bottom: 20px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+			}
+			@media all and (min-width: 1200px){
+				margin-top: 12px;
+			}
+		}
+		.head-right{
+			@media all and (min-width: 768px){
+				display: flex;
+			}
+		}
+		.select-wrap{
+			margin-bottom: 10px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+			}
+			& + .select-wrap{
+				@media all and (min-width: 768px){
+					margin-left: 10px;
+				}
+				@media all and (min-width: 1200px){
+					margin-left: 16px;
+				}
+			}
+		}	
+		.react-select__value-container{
+			padding: 0 4px 0 13px;
+		}
+	}
+	.react-select__single-value{
+		@media all and (min-width: 768px){
+			@include fontsize(18px)
+		}
+		@media all and (min-width: 1200px){
+			@include fontsize(20px)
+		}
+	}
+	.invoice-wrap{
+		background: $white;
+		@include radius(4px);
+		padding: 9px;
+		margin-bottom: 10px;
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		.left-block{
+			margin-bottom: 10px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+		.right-block{
+			@media all and (min-width: 768px){
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+		.invoice-thumbnail{
+			@include radius(4px);
+			overflow: hidden;
+			width: 111px;
+			height: 60px;
+			margin-bottom: 10px;
+			@media all and (min-width: 768px){
+				margin-bottom: 0;
+				margin-right: 20px;
+			}
+			@media all and (min-width: 992px){
+				margin-right: 30px;
+			}
+			@media all and (min-width: 1200px){
+				margin-right: 59px;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				display: block;
+			}
+		}
+		.invoice-name{
+			font-weight: $fw-semibold;
+			@media all and (min-width: 768px){
+				@include fontsize(18px);
+				padding-right: 20px;
+			}
+			@media all and (min-width: 768px){
+				@include fontsize(20px);
+			}
+		}
+		.price-wrap{
+			border: 1px solid $gray;
+			font-weight: $fw-bold;
+			@include fontsize(18px);
+			min-width: 180px;
+			padding: 10px;
+			margin-bottom: 10px;
+			@media all and (min-width: 768px){
+				@include fontsize(20px);
+				margin-right: 30px;
+				margin-bottom: 0;
+			}
+			@media all and (min-width: 992px){
+				@include fontsize(22px);
+			}
+			@media all and (min-width: 1200px){
+				@include fontsize(24px);
+				padding: 14px 12px;
+				margin-right: 50px;
+			}
+			@media all and (min-width: 1440px){
+				margin-right: 80px;
+			}
+		}
+		.checkbox-wrap{
+			margin-right: 7px;
+		}
+	}
+	.services-inputs {
+		@media all and (min-width: 768px){
+			margin: 0 0 30px;
+		}
+	}
+	.btns-wrap{
+		@media all and (min-width: 768px){
+			display: flex;
+			justify-content: flex-end;
+		}
+		@media all and (min-width: 1200px){
+			margin-top: 33px;
+		}
+		@media all and (min-width: 1440px){
+			padding-right: 4px;
+		}
+		.total-price{
+			background: $white;
+			box-shadow: 2px 4px 8px $gray-6-transparent;
+			@include radius(4px);
+			text-align: center;
+			margin-bottom: 20px;
+			padding: 10px 10px 11px;
+			@media all and (min-width: 768px){
+				min-width: 170px;
+				margin-right: 20px;
+			}
+			@media all and (min-width: 992px){
+				min-width: 200px;
+				margin-right: 30px;
+			}
+			@media all and (min-width: 1200px){
+				min-width: 240px;
+				margin-right: 40px;
+			}
+			@media all and (min-width: 1440px){
+				margin-right: 59px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				margin-right: 57px;
+				min-width: 230px;
+			}
+			.price-wrap{
+				font-weight: $fw-black2;
+				@media all and (min-width: 768px){
+					margin-left: 9px;
+				}
+			}
+		}
+		.btn{
+			width: 100%;
+			@media all and (min-width: 768px){
+				min-width: 170px;
+			}
+			@media all and (min-width: 992px){
+				min-width: 200px;
+				padding: 6px 10px 5px;
+			}
+			@media all and (min-width: 1200px){
+				min-width: 240px;
+				padding: 4px 10px 4px;
+			}
+			@media all and (min-width: 1300px) and (max-width: 1400px){
+				min-width: 230px;
+			}
+		}
+	}
+}

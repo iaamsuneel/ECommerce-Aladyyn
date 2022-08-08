@@ -1,0 +1,77 @@
+/*
+ Table Of Contents
+ 
+ 1). Border-Radius
+ 2). Transition
+ 3). Transform
+ 4). Box-shadow
+ ===============================================*/
+// Border-Radius
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;          
+}
+// Transition
+@mixin transition($time){
+   -webkit-transition: $time;
+      -moz-transition: $time;
+       -ms-transition: $time;
+        -o-transition: $time;
+           transition: $time;
+}
+//  Transform
+@mixin transform($val){
+   -webkit-transform: $val;
+   -moz-transform: $val;
+   -ms-transform: $val;
+   -o-transform: $val;
+   transform: $val;
+}
+// Positon-absolute
+@mixin absolute($top:auto, $right:auto, $bottom:auto, $left:auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+// Positon-fixed
+@mixin fixed ($top:auto, $right:auto, $bottom:auto, $left:auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: fixed;
+}
+//  Border
+ @mixin border ($border-width, $border-style, $border-color){
+   border: $border-width $border-style $border-color;   
+ }
+ //font size
+ @function calculateRem($size) {
+   $remSize: $size / 16px;
+   @return #{$remSize}rem;
+}
+@mixin fontsize($size) {   
+   font-size: calculateRem($size);
+} 
+//  Mixin for after and before
+@mixin after($width, $height){
+   content: '';
+   width: $width;
+   height: $height;
+}
+
+/*
+  4). Box-Shadow
+  -----------------------*/
+@mixin box-shadow($val) {
+ -webkit-box-shadow: $val;
+ -moz-box-shadow:  $val;
+ box-shadow:  $val;
+}
+
+
+

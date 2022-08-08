@@ -1,0 +1,110 @@
+.notifications{
+	padding: 20px 0 60px;
+	h1{
+		margin-bottom: 20px;
+		@media all and (min-width: 768px){
+			margin-bottom: 30px;
+		}
+		@media all and (min-width: 1200px){
+			margin-bottom: 36px;
+		}
+	}
+	.notification-date{
+		@include fontsize(13px);
+		color: $gray-2;
+		margin-bottom: 20px;
+		&.m-fix{
+			@media all and (min-width: 768px){
+				margin: 25px 0 20px;
+			}
+		}
+		@media all and (min-width: 768px){
+			margin-bottom: 30px;
+		}
+	}
+	.notification-wrap{
+		box-shadow: 2px 4px 8px rgba(89, 97, 117, 0.08);
+		background: $white;
+		@include radius(4px);
+		position: relative;
+		padding: 40px 15px 15px;
+		margin-bottom: 10px;
+		@media all and (min-width: 768px){
+			padding: 20px 110px 20px 50px;
+		}
+		@media all and (min-width: 1200px){
+			padding: 20px 120px 14px 60px;
+			margin-bottom: 13px;
+		}
+		&.unread{
+			background: $blue-light;
+		}
+		.close-wrap{
+			@include absolute(10px, auto, auto, 15px);
+			z-index: 1;
+			@media all and (min-width: 768px){
+				top: 22px;
+				left: 18px;
+			}
+			button{
+				width: 23px;
+				height: 23px;
+				display: block;
+				background: $blue-light;
+				@include radius(50%);
+				.icon-cross{
+					display: block;
+					background: url(../../images/icons/icon-cross-4.svg) no-repeat;
+					width: 10px;
+					height: 10px;
+					margin: auto;
+				}
+			}
+		}
+		.notification-heading{
+			color: $gray-5;
+			font-weight: $fw-bold;
+			line-height: 1.333;
+			margin-bottom: 7px;
+			@media all and (min-width: 768px){
+				@include fontsize(18px);
+			}
+		}
+		.notification-details{
+			color: $gray-5;
+			@include fontsize(14px);
+			line-height: 1.5;
+			letter-spacing: 0.1px;
+			@media all and (min-width: 768px){
+				@include fontsize(16px);
+			}
+			p{
+				margin-bottom: 20px;
+				@media all and (min-width: 768px){
+					margin-bottom: 25px;
+				}
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			button{
+				@include fontsize(14px);
+				display: inline;
+				color: $blue;
+				background: transparent;
+				outline: none;
+				padding: 0;
+			}
+		}
+		.time-wrap{
+			@include fontsize(13px);
+			color: $gray-2;
+			@include absolute(13px, 15px);
+			@media all and (min-width: 768px){
+				top: 36px;
+				right: auto;
+				left: calc(100% - 72px);
+			}
+		}
+	}
+}

@@ -1,17 +1,68 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Tab, Tabs } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import ReactStars from 'react-stars'
+import Slider from "react-slick";
 import ServiceDescription from "../Components/ServiceDescription";
 import ServiceGalary from "../Components/ServiceGalary";
+import { getAnotherServiceAction } from "../Store/slices/anotherServiceSlice";
 import { getServiceDetilsAction } from "../Store/slices/serviceDatilsSlice";
-import { useAppDispatch } from "../Store/storeHooks";
+import { useAppDispatch, useAppSelector } from "../Store/storeHooks";
+import RecommendedServices from "../Components/RecommededServices";
+import { getRecommendedServiceData } from "../Store/slices/recommendedServiceSlice";
+import { api } from "../API/axios";
+import endPoints from "../API/endPoints";
 const ServiceDetails = () => {
+    const [dynamicRating, setDynamicRating] = useState<any>()
+    const [review, setReview] = useState<any>()
+    console.log("dynamicRating", dynamicRating, review)
+    const navigate = useNavigate()
     const dispatch = useAppDispatch()
-    const { serviceId } = useParams()
+    const { serviceId, sellerId } = useParams()
+    const getAnotherServiceData = useAppSelector((state) => state.anotherServiceReducer?.getAnotherServiceData)
+    const serviceDetailsData = useAppSelector((state: any) => state.getServiceDetailsReducer?.getServiceDetailsData)
+    console.log("getAnotherServiceData", serviceDetailsData)
+    const categoryId = serviceDetailsData?.data?.categoryId
+    const subcategoryId = serviceDetailsData?.data?.subcategoryId
+    console.log("first", categoryId, subcategoryId)
     useEffect(() => {
         dispatch(getServiceDetilsAction(serviceId))
-    }, [])
-    console.log("serviceId", serviceId)
+        dispatch(getAnotherServiceAction({ serviceId, sellerId }))
+        if (subcategoryId) {
+            dispatch(getRecommendedServiceData({ serviceId, categoryId, subcategoryId }))
+        }
+    }, [subcategoryId])
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        arrows: true
+    }
+    const userRatingService = {
+        count: 5,
+        size: 25,
+        edit: true,
+        value: dynamicRating,
+        activeColor: "#ffd700",
+        onChange: (e: any) => {
+            setDynamicRating(e)
+        }
+    }
+    const ratingAndReviewUser = (e: any) => {
+        e.preventDefault()
+        var token = localStorage.getItem("token")
+        console.log("ghghgh")
+        if (token) {
+            api.post(endPoints.USER_ADD_REVIEW_RATING, { serviceId: serviceId, rating: dynamicRating, review: review })
+        }
+        else {
+            navigate('/sign-in')
+        }
+
+    }
+
+    //console.log("serviceId", serviceId, sellerId)
     return (<>
         <section className="edit-information profile listing after-fix">
             <div className="Toastify"></div>
@@ -41,51 +92,54 @@ const ServiceDetails = () => {
                         <h2>Other Services from This Seller</h2>
                     </div>
                     <div className="slider-wrap">
-                        <div className="slick-slider slick-initialized" dir="ltr">
-                            <button type="button" data-role="none" className="slick-arrow slick-prev slick-disabled" > Previous</button>
-                            <div className="slick-list">
-                                <div className="slick-track" >
-                                    <div data-index="0" className="slick-slide slick-active slick-current" aria-hidden="false" >
-                                        <div>
-                                            <div className="slide">
-                                                <div className="card-wrap">
-                                                    <a className="service-block" href="/service-detail/626a75dd8befe7cc3580950b/620a38d001342d68491aed08">
-                                                        <div className="service-image"><img src="https://css7941-api.thesst.com/uploads/service/16506271627483D-Wallpaper-Robo.jpg" alt="service-image" /></div>
-                                                        <div className="service-card">
-                                                            <div className="service-name">Subhro Test 100</div>
-                                                            <div className="location">Afghanistan Badakhshan</div>
-                                                            <div className="address">Adarsh nagar</div>
-                                                            <div className="seller-rating">
-                                                                <div className="rating-wrap">
-                                                                    <div className="rating-image"><span ><span /><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span  ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span /></div>
-                                                                    <div className="rating-number">0 reviews</div>
+                        <Slider {...settings}>
+                            {getAnotherServiceData?.data?.map((item: any, index: any) => {
+                                return <div key={index} >
+                                    <div className="slick-track" >
+                                        <div aria-hidden="false" >
+                                            <div>
+                                                <div className="slide">
+                                                    <div className="card-wrap">
+                                                        <a className="service-block" href="/service-detail/626a75dd8befe7cc3580950b/620a38d001342d68491aed08">
+                                                            <div className="service-image"><img src="https://css7941-api.thesst.com/uploads/service/16506271627483D-Wallpaper-Robo.jpg" alt="service-image" /></div>
+                                                            <div className="service-card">
+                                                                <div className="service-name">{item.title}</div>
+
+                                                                <div className="location">{item?.addressData[0]?.countryName} {item?.addressData[0]?.addressLine1}  {item?.addressData[0]?.addressLine2} </div>
+                                                                <div className="address">{item?.addressData[0]?.cityName}</div>
+                                                                <div className="seller-rating">
+                                                                    <div className="rating-wrap">
+                                                                        <div className="rating-image">
+                                                                            <ReactStars
+                                                                                count={5}
+                                                                                size={25}
+                                                                                value={item?.averageRating}
+                                                                                edit={false}
+                                                                                activeColor="#ffd700"
+                                                                            />
+                                                                        </div>
+                                                                        <div className="rating-number">{item?.totalReview} reviews</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="services-block">
+                                                                    <div className="price">{item?.price}</div>
+                                                                    <button className="wishlist-btn"><i className="icon-heart"></i></button>
                                                                 </div>
                                                             </div>
-                                                            <div className="services-block">
-                                                                <div className="price">₹395.65</div>
-                                                                <button className="wishlist-btn"><i className="icon-heart"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                                        </a>
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <button type="button" data-role="none" className="slick-arrow slick-next" > Next</button>
-                        </div>
+                            })
+                            }
+                        </Slider>
                     </div>
                 </div>
-                <div className="simple-sliders recommend">
-                    <div className="slider-wrap">
-                        <div className="slick-slider slick-initialized">
-                            <div className="slick-list">
-                                <div className="slick-track" ></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <RecommendedServices />
                 <div className="reviews">
                     <div className="review-head">
                         <h2>Reviews</h2>
@@ -96,13 +150,16 @@ const ServiceDetails = () => {
                             <div className="text-image">G</div>
                         </div>
                         <div className="add-form">
-                            <form>
+                            <form onSubmit={ratingAndReviewUser}>
                                 <div className="form-wrap">
-                                    <div className="textarea-wrap"><textarea className="textarea" placeholder="Write a review"></textarea></div>
+                                    <div className="textarea-wrap">
+                                        <textarea className="textarea" placeholder="Write a review" onChange={(e) => setReview(e.target.value)}></textarea></div>
                                     <div className="rate-service">
                                         <h4>Rate the service:</h4>
                                         <div className="rate-image">
-                                            <div className="rating-image"><span ><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span><span ><span><img src="/static/media/icon-star-empty.52a69168e7bc50857a6426be4eaee425.svg" className="icon" /></span><span ><img src="/static/media/icon-star-2.3ab379ed68837c4045b127c3c9741767.svg" className="icon" /></span></span></span></div>
+                                            <div className="rating-image">
+                                                <ReactStars {...userRatingService} />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

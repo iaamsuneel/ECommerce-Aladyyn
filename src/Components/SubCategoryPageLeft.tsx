@@ -17,9 +17,9 @@ const SubCategoryPageLeft = () => {
             console.log("highToLowSort")
         }
     }
-   /*  const ratingChanged = (newRating: any) => {
-        console.log(newRating);
-    }; */
+    /*  const ratingChanged = (newRating: any) => {
+         console.log(newRating);
+     }; */
     return (<>
         <div className="right-block">
             <div className="head-wrap">
@@ -42,7 +42,7 @@ const SubCategoryPageLeft = () => {
                                     <div className="react-select__indicator react-select__dropdown-indicator css-tlfecz-indicatorContainer"
                                         aria-hidden="true"><svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true"
                                             focusable="false" className="css-8mmkcg">
-                                          
+
                                         </svg></div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ const SubCategoryPageLeft = () => {
             <div className="sub-category_wrapper" >
                 {getServiceData?.data.map((item: any, index: any) => {
                     return <Link key={index} className="service-block"
-                        to={`/service-detail/${item.serviceId}`} /*/category/particular/61c1e2b8eec4c2436578e291/61ee6f11a6c42d1621bb5310" */>
+                        to={`/service-detail/${item.serviceId}/${item.sellerId}`} /*/category/particular/61c1e2b8eec4c2436578e291/61ee6f11a6c42d1621bb5310" */>
                         <div className="service-image"><img
                             src="https://css7941-api.thesst.com/uploads/service/1652941098169mobile-repair.png" alt="service" />
                         </div>

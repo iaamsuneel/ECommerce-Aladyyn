@@ -10,7 +10,9 @@ const endPoints = {
     GET_CITY: '/get_city',
     POST_FREELENCER_ENQUIRY: '/seller_enquiry',
     GET_SERVICE: '/get_service',
-    GET_SERVICE_DETAILS:'/get_service_detail',
-    GET_ANOTHER_SERVICE:'/get_another_service_from_same_seller',
+    GET_SERVICE_DETAILS: '/get_service_detail',
+    GET_ANOTHER_SERVICE: '/get_another_service_from_same_seller',
+    GET_RECOMMENDED_SERVICE: '/get_recommended_service',
+    USER_ADD_REVIEW_RATING: '/user_add_review_rating'
 }
 export default endPoints

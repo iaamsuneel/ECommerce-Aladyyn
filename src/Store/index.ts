@@ -6,6 +6,7 @@ import getCityReducer from "./slices/getCitySlice";
 import homepagereducer from "./slices/getHomeSlice";
 import getServiceReducer from "./slices/getServiceSlice";
 import getStateReducer from "./slices/getStateSlice";
+import getRecommendedServiceReducer from "./slices/recommendedServiceSlice";
 import getServiceDetailsReducer from "./slices/serviceDatilsSlice";
 import getSubCategoryReducer from "./slices/subCategorySlice";
 
@@ -19,7 +20,8 @@ export const store = configureStore({
         getCityReducer: getCityReducer,
         getServiceReducer: getServiceReducer,
         getServiceDetailsReducer: getServiceDetailsReducer,
-        anotherServiceReducer: anotherServiceReducer
+        anotherServiceReducer: anotherServiceReducer,
+        getRecommendedServiceReducer: getRecommendedServiceReducer
     }
 })
 export type RootState = ReturnType<typeof store.getState>

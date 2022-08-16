@@ -36,7 +36,7 @@ function App() {
         <Route path='/best-seller' element={<BestSellers />} />
         <Route path='/become-seller-form' element={<BecomeSeller />} />
         <Route path='/category/particular/:catId/:subCatId' element={<SubcategoryPage />} />
-        <Route path='/service-detail/:serviceId' element={<ServiceDetails />} />
+        <Route path='/service-detail/:serviceId/:sellerId' element={<ServiceDetails />} />
       </Routes>
       <Footer />
     </div>

@@ -1,9 +1,9 @@
 import ReactStars from 'react-stars'
 import { useAppSelector } from '../Store/storeHooks';
 const ServiceDescription = () => {
-    //const getServiceData = useAppSelector((state: any) => state.getServiceReducer?.getServiceData)
+    const getServiceData = useAppSelector((state: any) => state.getServiceReducer?.getServiceData)
     const serviceDetailsData = useAppSelector((state: any) => state.getServiceDetailsReducer?.getServiceDetailsData)
-    console.log("serviceDetailsData", serviceDetailsData)
+    /* console.log("serviceDetailsData", serviceDetailsData) */
     return (<>
         <div className="tab-content">
             <div id="uncontrolled-tab-example-tabpane-description" aria-labelledby="uncontrolled-tab-example-tab-description"
